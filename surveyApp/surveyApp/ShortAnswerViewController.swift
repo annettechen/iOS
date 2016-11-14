@@ -10,6 +10,8 @@ import UIKit
 
 class ShortAnswerViewController: UIViewController {
 
+    var questionName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +22,16 @@ class ShortAnswerViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func submitShortAnswer(sender: AnyObject) {
+        let newQuestion = shortAnswerTextField.text!
+        (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as! QuestionListTableViewController).questions.append(newQuestion)
+        self.navigationController!.popViewControllerAnimated(true)
+    }
+
+    
+    @IBOutlet weak var shortAnswerTextField: UITextField!
     
 
     /*
