@@ -14,6 +14,9 @@
 		22FF40C91DD293DB0019C2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF40C71DD293DB0019C2C4 /* LaunchScreen.storyboard */; };
 		22FF40D41DD293DC0019C2C4 /* surveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40D31DD293DC0019C2C4 /* surveyAppTests.swift */; };
 		22FF40DF1DD293DC0019C2C4 /* surveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40DE1DD293DC0019C2C4 /* surveyAppUITests.swift */; };
+		80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A336AD1DD94948003C6C15 /* ShortAnswerViewController.swift */; };
+		80A336B01DD94948003C6C15 /* ShortAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A336AE1DD94948003C6C15 /* ShortAnswerViewController.xib */; };
+		80A336B41DD99770003C6C15 /* QuestionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A336B31DD99770003C6C15 /* QuestionListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		22FF40DA1DD293DC0019C2C4 /* surveyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = surveyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF40DE1DD293DC0019C2C4 /* surveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyAppUITests.swift; sourceTree = "<group>"; };
 		22FF40E01DD293DC0019C2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80A336AD1DD94948003C6C15 /* ShortAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnswerViewController.swift; sourceTree = "<group>"; };
+		80A336AE1DD94948003C6C15 /* ShortAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortAnswerViewController.xib; sourceTree = "<group>"; };
+		80A336B31DD99770003C6C15 /* QuestionListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +106,12 @@
 				22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */,
 				22FF40C01DD293DB0019C2C4 /* ViewController.swift */,
 				22FF40C21DD293DB0019C2C4 /* Main.storyboard */,
+				80A336AD1DD94948003C6C15 /* ShortAnswerViewController.swift */,
+				80A336AE1DD94948003C6C15 /* ShortAnswerViewController.xib */,
 				22FF40C51DD293DB0019C2C4 /* Assets.xcassets */,
 				22FF40C71DD293DB0019C2C4 /* LaunchScreen.storyboard */,
 				22FF40CA1DD293DB0019C2C4 /* Info.plist */,
+				80A336B31DD99770003C6C15 /* QuestionListTableViewController.swift */,
 			);
 			path = surveyApp;
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FF40C91DD293DB0019C2C4 /* LaunchScreen.storyboard in Resources */,
+				80A336B01DD94948003C6C15 /* ShortAnswerViewController.xib in Resources */,
 				22FF40C61DD293DB0019C2C4 /* Assets.xcassets in Resources */,
 				22FF40C41DD293DB0019C2C4 /* Main.storyboard in Resources */,
 			);
@@ -256,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A336B41DD99770003C6C15 /* QuestionListTableViewController.swift in Sources */,
 				22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */,
+				80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = surveyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = surveyApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,6 +496,7 @@
 				22FF40E51DD293DC0019C2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22FF40E61DD293DC0019C2C4 /* Build configuration list for PBXNativeTarget "surveyAppTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +505,7 @@
 				22FF40E81DD293DC0019C2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22FF40E91DD293DC0019C2C4 /* Build configuration list for PBXNativeTarget "surveyAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +514,7 @@
 				22FF40EB1DD293DC0019C2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
