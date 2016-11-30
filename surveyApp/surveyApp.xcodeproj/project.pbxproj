@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A723E1DEE8E01006BA37E /* SurveyMonkeyAPI.swift */; };
 		22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */; };
 		22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40C01DD293DB0019C2C4 /* ViewController.swift */; };
 		22FF40C41DD293DB0019C2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF40C21DD293DB0019C2C4 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		225A723E1DEE8E01006BA37E /* SurveyMonkeyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyMonkeyAPI.swift; sourceTree = "<group>"; };
 		22FF40BB1DD293DB0019C2C4 /* surveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = surveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FF40C01DD293DB0019C2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				22FF40C71DD293DB0019C2C4 /* LaunchScreen.storyboard */,
 				22FF40CA1DD293DB0019C2C4 /* Info.plist */,
 				80A336B31DD99770003C6C15 /* QuestionListTableViewController.swift */,
+				225A723E1DEE8E01006BA37E /* SurveyMonkeyAPI.swift */,
 			);
 			path = surveyApp;
 			sourceTree = "<group>";
@@ -202,13 +205,16 @@
 				TargetAttributes = {
 					22FF40BA1DD293DB0019C2C4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 					};
 					22FF40CE1DD293DC0019C2C4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 22FF40BA1DD293DB0019C2C4;
 					};
 					22FF40D91DD293DC0019C2C4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 22FF40BA1DD293DB0019C2C4;
 					};
 				};
@@ -270,6 +276,7 @@
 				22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */,
 				80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
+				225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -428,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -439,6 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/surveyApp.app/surveyApp";
 			};
 			name = Debug;
@@ -451,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/surveyApp.app/surveyApp";
 			};
 			name = Release;
@@ -462,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = surveyApp;
 			};
 			name = Debug;
@@ -473,6 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = surveyApp;
 			};
 			name = Release;
