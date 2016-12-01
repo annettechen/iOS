@@ -1,29 +1,23 @@
 //
-//  ViewController.swift
+//  UserProfileViewController.swift
 //  surveyApp
 //
-//  Created by Annette Chen on 11/8/16.
+//  Created by Annette Chen on 12/1/16.
 //  Copyright © 2016 Annette Chen. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBOutlet weak var surveyNameTextField: UITextField!
-    @IBOutlet weak var surveyDescTextField: UITextField!
-
-
 }
-

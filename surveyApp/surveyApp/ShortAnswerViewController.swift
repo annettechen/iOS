@@ -24,10 +24,10 @@ class ShortAnswerViewController: UIViewController {
     }
     
     
-    @IBAction func submitShortAnswer(sender: AnyObject) {
+    @IBAction func submitShortAnswer(_ sender: AnyObject) {
         let newQuestion = shortAnswerTextField.text!
         (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as! QuestionListTableViewController).questions.append(newQuestion)
-        self.navigationController!.popViewControllerAnimated(true)
+        self.navigationController!.popViewController(animated: true)
     }
 
     
