@@ -11,7 +11,7 @@ import FBSDKLoginKit
 
 class ViewController: UIViewController {
     
-    @IBAction func storyboard2ButtonAction(sender: AnyObject) {
+    @IBAction func userProfileAction(sender: AnyObject) {
         
         // Create a new "Storyboard2" instance.
         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
