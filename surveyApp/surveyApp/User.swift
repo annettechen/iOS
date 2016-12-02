@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class User {
     let id: Int
@@ -27,7 +28,19 @@ class User {
         self.points = points
     }
     
-    func getInfoFromAPI(id: Int) -> JSONSerialization {
-        let url = "ka-data.herokuapp.com/users" + id 
+    func getInfoFromAPI(id:Int) {
+        let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/info"
+        
+        Alamofire.request(url).responseJSON {response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)
+            if let json = response.result.value {
+                print("JSON: \(json)")
+            }
+            
+        }
     }
+
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Survey {
     let id: Int
@@ -28,6 +29,15 @@ class Survey {
     }
     
     func getInfoFromAPI(id:Int) -> JSONSerialization {
+        let url = "ka-data.herokuapp.com/users" + "\(id)" + "/info"
+        var resultJSON = JSONSerialization()
+        Alamofire.request(url).responseJSON {response in
+            if let json = response.result.value{
+                resultJSON = json as! JSONSerialization
+            }
+        }
+        print(resultJSON)
+        return resultJSON
         
     }
     

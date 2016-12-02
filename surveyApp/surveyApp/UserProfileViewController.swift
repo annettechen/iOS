@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class UserProfileViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet var surveyTable: UITableView!
     
+    let user = User(id: 2, name:"mary", email:"mary", gender:"female", age:20, ethnicity: "white", points: 10 )
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,8 +28,7 @@ class UserProfileViewController: UIViewController {
         surveyTable.register(cellNib, forCellReuseIdentifier: "cell")
         
         // get the data for the table
-        
-
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,6 +37,5 @@ class UserProfileViewController: UIViewController {
     }
     
     @IBAction func editProfile(){
-        
-    }
+        user.getInfoFromAPI(id: 2)    }
 }

@@ -12,7 +12,7 @@
         <!--User Profile View Controller-->
         <scene sceneID="AIG-AA-XLx">
             <objects>
-                <viewController id="dQY-n3-WBh" customClass="UserProfileViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialController" id="dQY-n3-WBh" customClass="UserProfileViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qXo-9k-Bkq"/>
                         <viewControllerLayoutGuide type="bottom" id="mN4-C4-LSy"/>
@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNo-yM-x4a">
-                                <rect key="frame" x="150" y="225" width="75" height="30"/>
+                                <rect key="frame" x="150" y="253" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Profile"/>
                                 <connections>

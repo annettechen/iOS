@@ -10,7 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    @IBAction func storyboard2ButtonAction(sender: AnyObject) {
+        
+        // Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
+        
+        // Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+        
+        // Display the new view controller.
+        present(controller, animated: true, completion: nil)
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
