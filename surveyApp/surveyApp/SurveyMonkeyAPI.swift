@@ -11,7 +11,7 @@ import Alamofire
 
 func getJson(){
 
-    Alamofire.request("https://ka-data.herokuapp.com/users").responseJSON { response in
+    Alamofire.request("localhost:3000/users/1/info").responseJSON { response in
         print("Start of response: ")
         print(response.request)  // original URL request
         print(response.response) // HTTP URL response
