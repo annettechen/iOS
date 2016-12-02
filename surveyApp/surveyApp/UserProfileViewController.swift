@@ -10,15 +10,17 @@ import UIKit
 
 class UserProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var surveyTables: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let cellNib = UINib(nibName: "SurveyCell", bundle: nil)
-        surveyTables.register(cellNib, forCellReuseIdentifier: "cell")
-        
+        tableView.register(cellNib, forCellReuseIdentifier: "cell")
+        print("viewdidload")
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,16 +28,19 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
-    func tableView(tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as!SurveyCell
+        print("hello")
+        print(cell)
         cell.name?.text = "Education Survey"
         cell.points?.text = "10"
         return cell
     }
 
+    
     
 }
