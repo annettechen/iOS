@@ -14,9 +14,11 @@
 		22FF40C91DD293DB0019C2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF40C71DD293DB0019C2C4 /* LaunchScreen.storyboard */; };
 		22FF40D41DD293DC0019C2C4 /* surveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40D31DD293DC0019C2C4 /* surveyAppTests.swift */; };
 		22FF40DF1DD293DC0019C2C4 /* surveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40DE1DD293DC0019C2C4 /* surveyAppUITests.swift */; };
-		80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A336AD1DD94948003C6C15 /* ShortAnswerViewController.swift */; };
-		80A336B01DD94948003C6C15 /* ShortAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A336AE1DD94948003C6C15 /* ShortAnswerViewController.xib */; };
-		80A336B41DD99770003C6C15 /* QuestionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A336B31DD99770003C6C15 /* QuestionListTableViewController.swift */; };
+		80029D5D1DF1195500487AAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80029D5A1DF1195500487AAC /* Bolts.framework */; };
+		80029D5E1DF1195500487AAC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80029D5B1DF1195500487AAC /* FBSDKCoreKit.framework */; };
+		80029D5F1DF1195500487AAC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80029D5C1DF1195500487AAC /* FBSDKLoginKit.framework */; };
+		80134D141DF1180300A12D15 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80134D131DF1180300A12D15 /* FBSDKShareKit.framework */; };
+		80A4F2151DF09FFA00281E0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4F2141DF09FFA00281E0E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +52,12 @@
 		22FF40DA1DD293DC0019C2C4 /* surveyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = surveyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF40DE1DD293DC0019C2C4 /* surveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyAppUITests.swift; sourceTree = "<group>"; };
 		22FF40E01DD293DC0019C2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80A336AD1DD94948003C6C15 /* ShortAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnswerViewController.swift; sourceTree = "<group>"; };
-		80A336AE1DD94948003C6C15 /* ShortAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortAnswerViewController.xib; sourceTree = "<group>"; };
-		80A336B31DD99770003C6C15 /* QuestionListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListTableViewController.swift; sourceTree = "<group>"; };
+		80029D5A1DF1195500487AAC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = surveyApp/Bolts.framework; sourceTree = "<group>"; };
+		80029D5B1DF1195500487AAC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = surveyApp/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		80029D5C1DF1195500487AAC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = surveyApp/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		80134D061DF112AB00A12D15 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
+		80134D131DF1180300A12D15 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-4.18.0/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		80A4F2141DF09FFA00281E0E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80029D5D1DF1195500487AAC /* Bolts.framework in Frameworks */,
+				80029D5E1DF1195500487AAC /* FBSDKCoreKit.framework in Frameworks */,
+				80134D141DF1180300A12D15 /* FBSDKShareKit.framework in Frameworks */,
+				80029D5F1DF1195500487AAC /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +96,7 @@
 				22FF40D21DD293DC0019C2C4 /* surveyAppTests */,
 				22FF40DD1DD293DC0019C2C4 /* surveyAppUITests */,
 				22FF40BC1DD293DB0019C2C4 /* Products */,
+				80A4F2061DF09C7800281E0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +113,14 @@
 		22FF40BD1DD293DB0019C2C4 /* surveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				80134D061DF112AB00A12D15 /* Bridging-Header.h */,
+				80A4F2141DF09FFA00281E0E /* LoginViewController.swift */,
 				22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */,
 				22FF40C01DD293DB0019C2C4 /* ViewController.swift */,
 				22FF40C21DD293DB0019C2C4 /* Main.storyboard */,
-				80A336AD1DD94948003C6C15 /* ShortAnswerViewController.swift */,
-				80A336AE1DD94948003C6C15 /* ShortAnswerViewController.xib */,
 				22FF40C51DD293DB0019C2C4 /* Assets.xcassets */,
 				22FF40C71DD293DB0019C2C4 /* LaunchScreen.storyboard */,
 				22FF40CA1DD293DB0019C2C4 /* Info.plist */,
-				80A336B31DD99770003C6C15 /* QuestionListTableViewController.swift */,
 			);
 			path = surveyApp;
 			sourceTree = "<group>";
@@ -132,6 +141,17 @@
 				22FF40E01DD293DC0019C2C4 /* Info.plist */,
 			);
 			path = surveyAppUITests;
+			sourceTree = "<group>";
+		};
+		80A4F2061DF09C7800281E0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80134D131DF1180300A12D15 /* FBSDKShareKit.framework */,
+				80029D5A1DF1195500487AAC /* Bolts.framework */,
+				80029D5B1DF1195500487AAC /* FBSDKCoreKit.framework */,
+				80029D5C1DF1195500487AAC /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +217,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Annette Chen";
 				TargetAttributes = {
 					22FF40BA1DD293DB0019C2C4 = {
@@ -242,7 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22FF40C91DD293DB0019C2C4 /* LaunchScreen.storyboard in Resources */,
-				80A336B01DD94948003C6C15 /* ShortAnswerViewController.xib in Resources */,
 				22FF40C61DD293DB0019C2C4 /* Assets.xcassets in Resources */,
 				22FF40C41DD293DB0019C2C4 /* Main.storyboard in Resources */,
 			);
@@ -269,9 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80A336B41DD99770003C6C15 /* QuestionListTableViewController.swift in Sources */,
 				22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */,
-				80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */,
+				80A4F2151DF09FFA00281E0E /* LoginViewController.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,8 +359,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -386,8 +406,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -406,6 +428,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -414,11 +437,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/surveyApp",
+				);
 				INFOPLIST_FILE = surveyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -427,11 +455,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/surveyApp",
+				);
 				INFOPLIST_FILE = surveyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

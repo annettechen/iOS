@@ -25,6 +25,5 @@ class ViewController: UIViewController {
     @IBOutlet weak var surveyNameTextField: UITextField!
     @IBOutlet weak var surveyDescTextField: UITextField!
 
-
 }
 
