@@ -1,5 +1,5 @@
 //
-//  SurveyModel.swift
+//  User.swift
 //  surveyApp
 //
 //  Created by Annette Chen on 12/2/16.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-class SurveyViewModel {
-    let surveys = [Survey]()
-    let profileRows: Int = 4
+class User {
     
 }

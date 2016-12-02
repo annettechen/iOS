@@ -18,7 +18,6 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         // Do any additional setup after loading the view.
         let cellNib = UINib(nibName: "SurveyCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
-        print("viewdidload")
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -34,8 +33,6 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as!SurveyCell
-        print("hello")
-        print(cell)
         cell.name?.text = "Education Survey"
         cell.points?.text = "10"
         return cell

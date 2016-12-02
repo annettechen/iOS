@@ -11,6 +11,8 @@
 		222755651DF09E6B00B36590 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222755641DF09E6B00B36590 /* UserProfile.storyboard */; };
 		222755681DF09EAC00B36590 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222755671DF09EAC00B36590 /* UserProfileViewController.swift */; };
 		2230E1A01DF1F2120053C3F9 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */; };
+		2230E1A21DF21E1F0053C3F9 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E1A11DF21E1F0053C3F9 /* Survey.swift */; };
+		2230E1A41DF21EFC0053C3F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E1A31DF21EFC0053C3F9 /* User.swift */; };
 		2249E00F1DF1088100866EF9 /* SurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2249E00D1DF1088100866EF9 /* SurveyCell.swift */; };
 		2249E0101DF1088100866EF9 /* SurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2249E00E1DF1088100866EF9 /* SurveyCell.xib */; };
 		225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A723E1DEE8E01006BA37E /* SurveyMonkeyAPI.swift */; };
@@ -49,6 +51,8 @@
 		222755641DF09E6B00B36590 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		222755671DF09EAC00B36590 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
+		2230E1A11DF21E1F0053C3F9 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		2230E1A31DF21EFC0053C3F9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2249E00D1DF1088100866EF9 /* SurveyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyCell.swift; sourceTree = "<group>"; };
 		2249E00E1DF1088100866EF9 /* SurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyCell.xib; sourceTree = "<group>"; };
 		225A723E1DEE8E01006BA37E /* SurveyMonkeyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyMonkeyAPI.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				222755671DF09EAC00B36590 /* UserProfileViewController.swift */,
 				2249E00D1DF1088100866EF9 /* SurveyCell.swift */,
 				2249E00E1DF1088100866EF9 /* SurveyCell.xib */,
+				2230E1A31DF21EFC0053C3F9 /* User.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */,
+				2230E1A11DF21E1F0053C3F9 /* Survey.swift */,
 			);
 			name = Survey;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2230E1A21DF21E1F0053C3F9 /* Survey.swift in Sources */,
 				80A336B41DD99770003C6C15 /* QuestionListTableViewController.swift in Sources */,
 				222755681DF09EAC00B36590 /* UserProfileViewController.swift in Sources */,
 				2249E00F1DF1088100866EF9 /* SurveyCell.swift in Sources */,
@@ -499,6 +506,7 @@
 				22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */,
 				80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
+				2230E1A41DF21EFC0053C3F9 /* User.swift in Sources */,
 				225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
