@@ -31,16 +31,33 @@ class User {
     func getInfoFromAPI(id:Int) {
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/info"
         
-        Alamofire.request(url).responseJSON {response in
+        let params: Parameters = ["user[name]" :"Test", "user[email]":"test@example.com", "user[age]": 25, "user[gender]":1, "user[taker]":true, "user[creator]":false, "user[ethnicity]":2, "user[points]": 30] as [String : Any]
+        print("trying to post..")
+        
+        Alamofire.request("https://ka-data.herokuapp.com/users", method: .post, parameters: params).responseJSON { response in
+            
             print(response.request)  // original URL request
             print(response.response) // HTTP URL response
             print(response.data)     // server data
-            print(response.result)
-            if let json = response.result.value {
-                print("JSON: \(json)")
-            }
+            print(response.result)   // result of response serialization
             
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
         }
+        
+            
+//        Alamofire.request(url).responseJSON {response in
+//            print(response.request)  // original URL request
+//            print(response.response) // HTTP URL response
+//            print(response.data)     // server data
+//            print(response.result)
+//            if let json = response.result.value {
+//                print("JSON: \(json)")
+//            }
+//            
+//        }
     }
-
+    
 }
+

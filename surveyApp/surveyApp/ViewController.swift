@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import Alamofire
 import FBSDKLoginKit
 
 class ViewController: UIViewController {
     
     @IBAction func userProfileAction(sender: AnyObject) {
-        
         // Create a new "Storyboard2" instance.
         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
         
@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         
         // Display the new view controller.
         present(controller, animated: true, completion: nil)
-        
     }
 
     override func viewDidLoad() {
@@ -36,7 +35,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var surveyNameTextField: UITextField!
     @IBOutlet weak var surveyDescTextField: UITextField!
-
 
 }
 

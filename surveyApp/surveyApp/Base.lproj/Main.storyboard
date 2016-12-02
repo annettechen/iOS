@@ -38,19 +38,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucd-DQ-3oG">
-                                <rect key="frame" x="119" y="100" width="82" height="30"/>
+                                <rect key="frame" x="146" y="100" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New Survey"/>
                                 <connections>
                                     <segue destination="rIq-O3-YDW" kind="push" id="ZhF-WO-gtd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woh-EJ-qyR">
-                                <rect key="frame" x="143" y="370" width="89" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-Sm-8j7">
+                                <rect key="frame" x="143" y="585" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go To Profile"/>
                                 <connections>
-                                    <action selector="storyboard2ButtonActionWithSender:" destination="7vu-bP-Aik" eventType="touchUpInside" id="IOp-Pg-7JT"/>
+                                    <action selector="userProfileActionWithSender:" destination="7vu-bP-Aik" eventType="touchUpInside" id="CSi-6V-hWT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmT-85-wGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-329" y="-231"/>
+            <point key="canvasLocation" x="-329.5" y="-231.5"/>
         </scene>
         <!--New Survey-->
         <scene sceneID="erf-FA-H8J">
@@ -146,7 +146,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A1J-dC-aan" id="hrw-Fq-SNM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -258,7 +258,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uic-oz-BYU"/>
+        <segue reference="ZhF-WO-gtd"/>
         <segue reference="Pp6-Ti-PYz"/>
     </inferredMetricsTieBreakers>
 </document>
