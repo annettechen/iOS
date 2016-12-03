@@ -19,11 +19,10 @@ class SurveyMonkeyCreateViewController: UIViewController {
     @IBOutlet weak var est_time: UITextField!
     @IBOutlet weak var points: UITextField!
     @IBOutlet var webView: UIWebView!
-    @IBOutlet weak var male: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +38,7 @@ class SurveyMonkeyCreateViewController: UIViewController {
         survey.description = descrip.text!
         survey.est_time = Int(est_time.text!)!
         survey.points = Int(points.text!)!
-
     }
+    
 }
 
