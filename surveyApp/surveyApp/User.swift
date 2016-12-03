@@ -32,7 +32,6 @@ class User {
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/info"
         
         let params: Parameters = ["user[name]" :"Test", "user[email]":"test@example.com", "user[age]": 25, "user[gender]":1, "user[taker]":true, "user[creator]":false, "user[ethnicity]":2, "user[points]": 30] as [String : Any]
-        print("trying to post..")
         
         Alamofire.request("https://ka-data.herokuapp.com/users", method: .post, parameters: params).responseJSON { response in
             

@@ -12,7 +12,14 @@ import Alamofire
 
 class SurveyMonkeyCreateViewController: UIViewController {
     
+    let survey = Survey()
+    
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var descrip: UITextView!
+    @IBOutlet weak var est_time: UITextField!
+    @IBOutlet weak var points: UITextField!
     @IBOutlet var webView: UIWebView!
+    @IBOutlet weak var male: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,23 +31,15 @@ class SurveyMonkeyCreateViewController: UIViewController {
         let url = NSURL (string: "https://mobile.surveymonkey.com/create/?ut_source=create_survey&ut_source2=header");
         let requestObj = NSURLRequest(url: url! as URL);
         webView?.loadRequest(requestObj as URLRequest);
-        login()
+        
     }
     
-    func login(){
-        print("logging in..")
-        let loginParams = ["username":"uplift_ka", "password":"kakakaka"]
-        let url = "https://www.surveymonkey.com/user/sign-in/?ut_source=anonweb&ut_source2=signout_confirmation"
-        Alamofire.request(url, method: .post, parameters: loginParams).responseJSON{ response in
-            if let JSON = response.result.value {
-                print(response.request)  // original URL request
-                print(response.response) // HTTP URL response
-                print(response.data)     // server data
-                print(response.result)
-                print("JSON: \(JSON)")
-            }
+    @IBAction func basicInfoNext(){
+        survey.title = name.text!
+        survey.description = descrip.text!
+        survey.est_time = Int(est_time.text!)!
+        survey.points = Int(points.text!)!
 
-        }
     }
 }
 

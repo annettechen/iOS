@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="4847" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Survey Monkey Create View Controller-->
         <scene sceneID="agd-DV-ZLu">
             <objects>
-                <viewController storyboardIdentifier="CreateSurveyController" id="EZn-IY-X0t" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateSurveyController" id="EZn-IY-X0t" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X8L-yj-0Qs"/>
                         <viewControllerLayoutGuide type="bottom" id="CNB-gx-YO7"/>
@@ -118,6 +118,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="basicInfoNext" destination="EZn-IY-X0t" eventType="touchUpInside" id="yDC-jL-eXB"/>
                                     <segue destination="ntx-tg-1ON" kind="show" id="5Jg-xj-PbX"/>
                                 </connections>
                             </button>
@@ -131,15 +132,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="descrip" destination="Iel-F5-5F2" id="HjX-5H-BZD"/>
+                        <outlet property="est_time" destination="pNF-A2-ggt" id="UQs-cJ-EYY"/>
+                        <outlet property="name" destination="6VM-Bp-h5I" id="1oN-Py-CY5"/>
+                        <outlet property="points" destination="o4A-Dk-VYe" id="Izf-Bb-V67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPt-6g-2na" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="815.20000000000005" y="104.7976011994003"/>
         </scene>
-        <!--View Controller-->
+        <!--Survey Monkey Create View Controller-->
         <scene sceneID="gDh-s5-lNf">
             <objects>
-                <viewController id="ntx-tg-1ON" sceneMemberID="viewController">
+                <viewController id="ntx-tg-1ON" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O3d-Cv-mWC"/>
                         <viewControllerLayoutGuide type="bottom" id="yCE-sI-CoM"/>
@@ -218,6 +225,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="male" destination="Gu4-e2-RsQ" id="IfK-wK-bqH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4H-Zb-I8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
