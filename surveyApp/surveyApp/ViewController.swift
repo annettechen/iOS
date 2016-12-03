@@ -17,11 +17,23 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
         
         // Create an instance of the storyboard's initial view controller.
-        let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "UserProfileController") as UIViewController
         
         // Display the new view controller.
         present(controller, animated: true, completion: nil)
     }
+    
+    @IBAction func makeASurvey(sender: AnyObject){
+        // Create a new Storyboard instance.
+        let storyboard = UIStoryboard(name: "SurveyMonkey", bundle: nil)
+        
+        // Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "CreateSurveyController") as UIViewController
+        
+        // Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

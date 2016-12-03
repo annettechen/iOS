@@ -12,7 +12,7 @@
         <!--User Profile View Controller-->
         <scene sceneID="AIG-AA-XLx">
             <objects>
-                <viewController storyboardIdentifier="InitialController" id="dQY-n3-WBh" customClass="UserProfileViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfileController" id="dQY-n3-WBh" customClass="UserProfileViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qXo-9k-Bkq"/>
                         <viewControllerLayoutGuide type="bottom" id="mN4-C4-LSy"/>
