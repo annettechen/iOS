@@ -10,8 +10,8 @@ import UIKit
 
 class SurveyCell: UITableViewCell {
 
-    @IBOutlet weak var surveyName: UILabel!
-    @IBOutlet weak var surveyPoints: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var points: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

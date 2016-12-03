@@ -11,22 +11,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="39" id="KGk-i7-Jjw" customClass="SurveyCell" customModule="surveyApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="62" id="KGk-i7-Jjw" customClass="SurveyCell" customModule="surveyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="38.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-eO-7lQ">
-                        <rect key="frame" x="256" y="8" width="58" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Survey Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7A-cr-oXW">
+                        <rect key="frame" x="21" y="24" width="253" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Survey Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7A-cr-oXW">
-                        <rect key="frame" x="8" y="9" width="102" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-eO-7lQ">
+                        <rect key="frame" x="300" y="24" width="58" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -35,16 +35,10 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="surveyName" destination="j7A-cr-oXW" id="dRb-fx-x9g"/>
-                <outlet property="surveyPoints" destination="Oit-eO-7lQ" id="J32-8F-sQs"/>
+                <outlet property="name" destination="j7A-cr-oXW" id="Ch9-al-949"/>
+                <outlet property="points" destination="Oit-eO-7lQ" id="WLV-nA-Alu"/>
             </connections>
-            <point key="canvasLocation" x="34" y="51.5"/>
+            <point key="canvasLocation" x="41.5" y="63"/>
         </tableViewCell>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TQB-9U-Eb7">
-            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <state key="normal" title="Button"/>
-            <point key="canvasLocation" x="194" y="132"/>
-        </button>
     </objects>
 </document>

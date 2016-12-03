@@ -50,7 +50,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go To Profile"/>
                                 <connections>
-                                    <action selector="userStoryboardWithSender:" destination="7vu-bP-Aik" eventType="touchUpInside" id="viS-Mz-yC7"/>
+                                    <action selector="userProfileActionWithSender:" destination="7vu-bP-Aik" eventType="touchUpInside" id="CSi-6V-hWT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJq-MM-GI6">
+                                <rect key="frame" x="137" y="492" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Make a Survey"/>
+                                <connections>
+                                    <action selector="makeASurveyWithSender:" destination="7vu-bP-Aik" eventType="touchUpInside" id="k69-q4-p1e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -259,6 +267,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="ZhF-WO-gtd"/>
-        <segue reference="Pp6-Ti-PYz"/>
+        <segue reference="xZJ-eG-mtn"/>
     </inferredMetricsTieBreakers>
 </document>
