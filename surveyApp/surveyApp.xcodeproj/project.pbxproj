@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		092198736FF95CA24083D90E /* Pods_surveyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62838600199FA1714338A31 /* Pods_surveyAppUITests.framework */; };
+		2202F5E31DF2BA02008A1648 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2202F5E21DF2BA02008A1648 /* Restriction.swift */; };
 		222755651DF09E6B00B36590 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222755641DF09E6B00B36590 /* UserProfile.storyboard */; };
 		222755681DF09EAC00B36590 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222755671DF09EAC00B36590 /* UserProfileViewController.swift */; };
 		2230E1A01DF1F2120053C3F9 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2202F5E21DF2BA02008A1648 /* Restriction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
 		222755641DF09E6B00B36590 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		222755671DF09EAC00B36590 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				2230E1A71DF223310053C3F9 /* Survey.swift */,
 				2290EE7F1DF23D370079DCCD /* SurveyMonkey.storyboard */,
 				2290EE811DF23F210079DCCD /* SurveyMonkeyCreateViewController.swift */,
+				2202F5E21DF2BA02008A1648 /* Restriction.swift */,
 			);
 			name = Survey;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */,
 				2230E1A81DF223310053C3F9 /* Survey.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
+				2202F5E31DF2BA02008A1648 /* Restriction.swift in Sources */,
 				225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

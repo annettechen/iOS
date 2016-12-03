@@ -13,14 +13,12 @@ import Alamofire
 class SurveyMonkeyCreateViewController: UIViewController {
     
     let survey = Survey()
-    @IBOutlet weak var surveyTitle: UILabel!
+
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var descrip: UITextView!
     @IBOutlet weak var est_time: UITextField!
     @IBOutlet weak var points: UITextField!
     @IBOutlet var webView: UIWebView!
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +38,12 @@ class SurveyMonkeyCreateViewController: UIViewController {
         survey.description = descrip.text!
         survey.est_time = Int(est_time.text!)!
         survey.points = Int(points.text!)!
-
+        
+    }
+    
+    @IBAction func genderNext(){
+        survey.genderRestriction = [0,1]
+        print(survey.genderRestriction)
     }
     
     
