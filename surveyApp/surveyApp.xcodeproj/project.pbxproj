@@ -18,7 +18,13 @@
 		2249E0101DF1088100866EF9 /* SurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2249E00E1DF1088100866EF9 /* SurveyCell.xib */; };
 		225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A723E1DEE8E01006BA37E /* SurveyMonkeyAPI.swift */; };
 		2290EE801DF23D370079DCCD /* SurveyMonkey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2290EE7F1DF23D370079DCCD /* SurveyMonkey.storyboard */; };
-		2290EE821DF23F210079DCCD /* SurveyMonkeyCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290EE811DF23F210079DCCD /* SurveyMonkeyCreateViewController.swift */; };
+		2290EE821DF23F210079DCCD /* SMBasicCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2290EE811DF23F210079DCCD /* SMBasicCreateViewController.swift */; };
+		22F5A8C01DF35C8900DE04E1 /* SMGenderCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A8BF1DF35C8900DE04E1 /* SMGenderCreateViewController.swift */; };
+		22F5A8C31DF35CF800DE04E1 /* SMAgeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A8C21DF35CF800DE04E1 /* SMAgeCreateViewController.swift */; };
+		22F5A8C51DF35D3300DE04E1 /* SMEthnicityCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A8C41DF35D3300DE04E1 /* SMEthnicityCreateViewController.swift */; };
+		22F5A8C71DF35D9100DE04E1 /* SMLocationCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A8C61DF35D9100DE04E1 /* SMLocationCreateViewController.swift */; };
+		22F5A8C91DF35DD900DE04E1 /* SMNumberCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A8C81DF35DD900DE04E1 /* SMNumberCreateViewController.swift */; };
+		22F5A8CB1DF3613F00DE04E1 /* SMDoneCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F5A8CA1DF3613F00DE04E1 /* SMDoneCreateViewController.swift */; };
 		22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */; };
 		22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40C01DD293DB0019C2C4 /* ViewController.swift */; };
 		22FF40C41DD293DB0019C2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF40C21DD293DB0019C2C4 /* Main.storyboard */; };
@@ -62,7 +68,13 @@
 		225A723E1DEE8E01006BA37E /* SurveyMonkeyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyMonkeyAPI.swift; sourceTree = "<group>"; };
 		2290EE7C1DF226050079DCCD /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
 		2290EE7F1DF23D370079DCCD /* SurveyMonkey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurveyMonkey.storyboard; sourceTree = "<group>"; };
-		2290EE811DF23F210079DCCD /* SurveyMonkeyCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyMonkeyCreateViewController.swift; sourceTree = "<group>"; };
+		2290EE811DF23F210079DCCD /* SMBasicCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBasicCreateViewController.swift; sourceTree = "<group>"; };
+		22F5A8BF1DF35C8900DE04E1 /* SMGenderCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMGenderCreateViewController.swift; sourceTree = "<group>"; };
+		22F5A8C21DF35CF800DE04E1 /* SMAgeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMAgeCreateViewController.swift; sourceTree = "<group>"; };
+		22F5A8C41DF35D3300DE04E1 /* SMEthnicityCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEthnicityCreateViewController.swift; sourceTree = "<group>"; };
+		22F5A8C61DF35D9100DE04E1 /* SMLocationCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMLocationCreateViewController.swift; sourceTree = "<group>"; };
+		22F5A8C81DF35DD900DE04E1 /* SMNumberCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMNumberCreateViewController.swift; sourceTree = "<group>"; };
+		22F5A8CA1DF3613F00DE04E1 /* SMDoneCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDoneCreateViewController.swift; sourceTree = "<group>"; };
 		22FF40BB1DD293DB0019C2C4 /* surveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = surveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22FF40C01DD293DB0019C2C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,13 +158,27 @@
 		2230E19E1DF1F2050053C3F9 /* Survey */ = {
 			isa = PBXGroup;
 			children = (
+				22F5A8C11DF35CA700DE04E1 /* ViewControllers */,
 				2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */,
 				2230E1A71DF223310053C3F9 /* Survey.swift */,
 				2290EE7F1DF23D370079DCCD /* SurveyMonkey.storyboard */,
-				2290EE811DF23F210079DCCD /* SurveyMonkeyCreateViewController.swift */,
 				2202F5E21DF2BA02008A1648 /* Restriction.swift */,
 			);
 			name = Survey;
+			sourceTree = "<group>";
+		};
+		22F5A8C11DF35CA700DE04E1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2290EE811DF23F210079DCCD /* SMBasicCreateViewController.swift */,
+				22F5A8BF1DF35C8900DE04E1 /* SMGenderCreateViewController.swift */,
+				22F5A8C21DF35CF800DE04E1 /* SMAgeCreateViewController.swift */,
+				22F5A8C41DF35D3300DE04E1 /* SMEthnicityCreateViewController.swift */,
+				22F5A8C61DF35D9100DE04E1 /* SMLocationCreateViewController.swift */,
+				22F5A8C81DF35DD900DE04E1 /* SMNumberCreateViewController.swift */,
+				22F5A8CA1DF3613F00DE04E1 /* SMDoneCreateViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		22FF40B21DD293DB0019C2C4 = {
@@ -510,16 +536,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F5A8C51DF35D3300DE04E1 /* SMEthnicityCreateViewController.swift in Sources */,
 				80A336B41DD99770003C6C15 /* QuestionListTableViewController.swift in Sources */,
 				222755681DF09EAC00B36590 /* UserProfileViewController.swift in Sources */,
+				22F5A8C31DF35CF800DE04E1 /* SMAgeCreateViewController.swift in Sources */,
+				22F5A8CB1DF3613F00DE04E1 /* SMDoneCreateViewController.swift in Sources */,
 				2249E00F1DF1088100866EF9 /* SurveyCell.swift in Sources */,
 				2230E1A01DF1F2120053C3F9 /* SurveyModel.swift in Sources */,
-				2290EE821DF23F210079DCCD /* SurveyMonkeyCreateViewController.swift in Sources */,
+				2290EE821DF23F210079DCCD /* SMBasicCreateViewController.swift in Sources */,
+				22F5A8C01DF35C8900DE04E1 /* SMGenderCreateViewController.swift in Sources */,
 				22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */,
 				2230E1A61DF222C40053C3F9 /* User.swift in Sources */,
 				80A336AF1DD94948003C6C15 /* ShortAnswerViewController.swift in Sources */,
+				22F5A8C71DF35D9100DE04E1 /* SMLocationCreateViewController.swift in Sources */,
 				2230E1A81DF223310053C3F9 /* Survey.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
+				22F5A8C91DF35DD900DE04E1 /* SMNumberCreateViewController.swift in Sources */,
 				2202F5E31DF2BA02008A1648 /* Restriction.swift in Sources */,
 				225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */,
 			);

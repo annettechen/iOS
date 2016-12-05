@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 
-class SurveyMonkeyCreateViewController: UIViewController {
+class SMBasicCreateViewController: UIViewController {
     
     let survey = Survey()
 
@@ -19,10 +19,10 @@ class SurveyMonkeyCreateViewController: UIViewController {
     @IBOutlet weak var est_time: UITextField!
     @IBOutlet weak var points: UITextField!
     @IBOutlet var webView: UIWebView!
+    @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,9 +42,9 @@ class SurveyMonkeyCreateViewController: UIViewController {
     }
     
     @IBAction func genderNext(){
-        survey.genderRestriction = [0,1]
-        print(survey.genderRestriction)
+
     }
+    
     
     
 }

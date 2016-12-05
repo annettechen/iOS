@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="4222" y="-611"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Basic Create View Controller-->
         <scene sceneID="e8r-Z3-D3i">
             <objects>
-                <viewController storyboardIdentifier="InitialController" id="o9R-1a-H5W" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialController" id="o9R-1a-H5W" customClass="SMBasicCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PT2-nL-o4U"/>
                         <viewControllerLayoutGuide type="bottom" id="xyG-to-cIv"/>
@@ -60,17 +60,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="B0t-sd-ffl" id="25E-qe-5NN"/>
+                        <outlet property="webView" destination="B0t-sd-ffl" id="94K-hV-w5H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zec-OP-DyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4845.6000000000004" y="98.50074962518741"/>
+            <point key="canvasLocation" x="5570" y="98"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Done Create View Controller-->
         <scene sceneID="utM-O7-YlT">
             <objects>
-                <viewController id="6RF-Dp-UqS" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6RF-Dp-UqS" customClass="SMDoneCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kKS-2T-0NC"/>
                         <viewControllerLayoutGuide type="bottom" id="egL-XS-sbR"/>
@@ -111,12 +111,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01b-qJ-uo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5533.6000000000004" y="99.400299850074973"/>
+            <point key="canvasLocation" x="6262" y="104"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Basic Create View Controller-->
         <scene sceneID="agd-DV-ZLu">
             <objects>
-                <viewController storyboardIdentifier="CreateSurveyController" id="EZn-IY-X0t" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateSurveyController" id="EZn-IY-X0t" customClass="SMBasicCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X8L-yj-0Qs"/>
                         <viewControllerLayoutGuide type="bottom" id="CNB-gx-YO7"/>
@@ -181,7 +181,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Provide a simle description of your survey" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iel-F5-5F2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Provide a simple description of your survey" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iel-F5-5F2">
                                 <rect key="frame" x="62" y="262" width="272" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="673" y="104"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Gender Create View Controller-->
         <scene sceneID="gDh-s5-lNf">
             <objects>
-                <viewController id="ntx-tg-1ON" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ntx-tg-1ON" customClass="SMGenderCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O3d-Cv-mWC"/>
                         <viewControllerLayoutGuide type="bottom" id="yCE-sI-CoM"/>
@@ -275,38 +275,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Male"/>
+                                <connections>
+                                    <action selector="maleTappedWithSender:" destination="ntx-tg-1ON" eventType="touchUpInside" id="grx-gQ-JAt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq1-eI-Zr5">
                                 <rect key="frame" x="117" y="333" width="141" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Female"/>
+                                <connections>
+                                    <action selector="femaleTappedWithSender:" destination="ntx-tg-1ON" eventType="touchUpInside" id="pun-Qf-2jT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etw-je-zVk">
                                 <rect key="frame" x="117" y="393" width="141" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Other"/>
+                                <connections>
+                                    <action selector="otherTappedWithSender:" destination="ntx-tg-1ON" eventType="touchUpInside" id="3fG-5h-W8f"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp0-m8-FGl">
-                                <rect key="frame" x="166" y="453" width="37" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="female" destination="Uq1-eI-Zr5" id="MK0-Az-fIl"/>
+                        <outlet property="male" destination="NpC-lC-1Pr" id="6Yu-5r-cVc"/>
+                        <outlet property="other" destination="etw-je-zVk" id="gYm-cI-FlI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4H-Zb-I8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="102.99850074962519"/>
+            <point key="canvasLocation" x="1409" y="104"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Age Create View Controller-->
         <scene sceneID="WAd-3B-5tp">
             <objects>
-                <viewController id="DM1-70-hpb" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DM1-70-hpb" customClass="SMAgeCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fna-W9-u3R"/>
                         <viewControllerLayoutGuide type="bottom" id="3YK-ae-RFK"/>
@@ -372,21 +379,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="surveyAgeNext" destination="DM1-70-hpb" eventType="touchUpInside" id="PON-HF-meL"/>
                                     <segue destination="wNj-Rc-hrh" kind="show" id="LUL-mz-Wrc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="age_lb" destination="3Zn-Xf-yep" id="kIs-bF-QIy"/>
+                        <outlet property="age_ub" destination="NcM-YM-ldk" id="RWe-uA-PMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Re4-78-FHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2149.5999999999999" y="101.19940029985008"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Ethnicity Create View Controller-->
         <scene sceneID="cdI-4j-zy4">
             <objects>
-                <viewController id="wNj-Rc-hrh" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wNj-Rc-hrh" customClass="SMEthnicityCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1JF-Pg-j5r"/>
                         <viewControllerLayoutGuide type="bottom" id="oed-4t-IN9"/>
@@ -416,54 +428,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hispanic or Latino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubo-m1-k6t">
-                                <rect key="frame" x="107" y="296" width="177" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="American Indian or Alaska Native" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-0P-aG1">
-                                <rect key="frame" x="34" y="338" width="323" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Asian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jb-cq-XWC">
-                                <rect key="frame" x="168" y="381" width="55" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="African American" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUH-LO-XJn">
-                                <rect key="frame" x="111" y="419" width="168" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Native Hawaiian or Other Pacific Islander" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikk-UQ-fpX">
-                                <rect key="frame" x="43" y="460" width="304" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="White" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmt-G0-Adv">
-                                <rect key="frame" x="166" y="533" width="58" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRo-NQ-mAc">
                                 <rect key="frame" x="313" y="613" width="46" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="surveyEthnicityNext" destination="wNj-Rc-hrh" eventType="touchUpInside" id="dlY-c1-kPI"/>
                                     <segue destination="tBX-QQ-zL6" kind="show" id="d4z-Sl-9aY"/>
                                 </connections>
                             </button>
@@ -476,18 +447,80 @@
                                     <segue destination="tBX-QQ-zL6" kind="show" id="Brk-pa-oRm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70w-Xm-gnA">
+                                <rect key="frame" x="26" y="320" width="323" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="American Indian or Alaska Native"/>
+                                <connections>
+                                    <action selector="indianTappedWithSender:" destination="wNj-Rc-hrh" eventType="touchUpInside" id="LqY-6u-IZL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7O-vo-2RH">
+                                <rect key="frame" x="97" y="273" width="181" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Hispanic or Latino"/>
+                                <connections>
+                                    <action selector="hispanicTappedWithSender:" destination="wNj-Rc-hrh" eventType="touchUpInside" id="l2J-kr-jiF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tad-Vo-dza">
+                                <rect key="frame" x="26" y="367" width="323" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Asian"/>
+                                <connections>
+                                    <action selector="asianTappedWithSender:" destination="wNj-Rc-hrh" eventType="touchUpInside" id="rwg-ws-0T4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea1-E8-yOr">
+                                <rect key="frame" x="26" y="406" width="323" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="African American"/>
+                                <connections>
+                                    <action selector="afamericanTappedWithSender:" destination="wNj-Rc-hrh" eventType="touchUpInside" id="558-lz-iqP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soi-02-JsC">
+                                <rect key="frame" x="26" y="529" width="323" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="White"/>
+                                <connections>
+                                    <action selector="whiteTappedWithSender:" destination="wNj-Rc-hrh" eventType="touchUpInside" id="YbU-Qt-T1C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xwC-x7-BpX">
+                                <rect key="frame" x="85" y="453" width="205" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="   Native Hawaiian or Other Pacific Islander"/>
+                                <connections>
+                                    <action selector="pacislanderTappedWithSender:" destination="wNj-Rc-hrh" eventType="touchUpInside" id="4kZ-RJ-1uI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="african_american" destination="ea1-E8-yOr" id="ZVi-dM-cLV"/>
+                        <outlet property="asian" destination="tad-Vo-dza" id="THQ-yh-K4L"/>
+                        <outlet property="hispanic" destination="q7O-vo-2RH" id="nUq-Y3-9Nh"/>
+                        <outlet property="indian" destination="70w-Xm-gnA" id="rKh-bt-WQM"/>
+                        <outlet property="pacific_islander" destination="xwC-x7-BpX" id="zOk-wa-rT6"/>
+                        <outlet property="white" destination="soi-02-JsC" id="4f6-2x-xYv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dga-Ac-rxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2802.4000000000001" y="99.400299850074973"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Location Create View Controller-->
         <scene sceneID="F5d-kJ-xgQ">
             <objects>
-                <viewController id="tBX-QQ-zL6" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tBX-QQ-zL6" customClass="SMLocationCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eo0-Eo-b1K"/>
                         <viewControllerLayoutGuide type="bottom" id="ByE-g2-XhM"/>
@@ -544,7 +577,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="3wh-iQ-NKq" kind="show" id="FRo-86-wYb"/>
+                                    <segue destination="UHx-sX-uRn" kind="show" id="TTs-KA-46J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pB5-3y-Hnk">
@@ -553,21 +586,101 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Skip"/>
                                 <connections>
-                                    <segue destination="3wh-iQ-NKq" kind="show" id="6M3-Rr-7vk"/>
+                                    <segue destination="UHx-sX-uRn" kind="show" id="b89-NS-JvA"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jbF-Q2-65P">
+                                <rect key="frame" x="16" y="269" width="343" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="jbF-Q2-65P" id="Tad-Gl-pq5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfl-5t-xI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477.5999999999999" y="97.601199400299862"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Knp-ya-OhZ">
+            <objects>
+                <viewController id="UHx-sX-uRn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k02-Dv-9bE"/>
+                        <viewControllerLayoutGuide type="bottom" id="pUN-7y-RTi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZMT-81-2im">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create A Survey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-fJ-YSZ">
+                                <rect key="frame" x="62" y="20" width="250" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Restrictions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0k-vo-KPU">
+                                <rect key="frame" x="121" y="131" width="126" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you want to limit how many people take your survey" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0h1-wS-jeo">
+                                <rect key="frame" x="35" y="170" width="304" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNR-ku-Mlz">
+                                <rect key="frame" x="105" y="237" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="people" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJm-xY-Zhd">
+                                <rect key="frame" x="210" y="240" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcw-7X-DUT">
+                                <rect key="frame" x="313" y="613" width="46" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="3wh-iQ-NKq" kind="show" id="9dE-Mn-K4J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYd-Gz-1RK">
+                                <rect key="frame" x="230" y="615" width="75" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <segue destination="3wh-iQ-NKq" kind="show" id="WNW-NF-S1A"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hfl-5t-xI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyf-y0-Z4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3477.5999999999999" y="97.601199400299862"/>
+            <point key="canvasLocation" x="4149.6000000000004" y="97.601199400299862"/>
         </scene>
-        <!--Survey Monkey Create View Controller-->
+        <!--Basic Create View Controller-->
         <scene sceneID="E7q-TW-B2d">
             <objects>
-                <viewController id="3wh-iQ-NKq" customClass="SurveyMonkeyCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3wh-iQ-NKq" customClass="SMBasicCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tKn-TU-JrQ"/>
                         <viewControllerLayoutGuide type="bottom" id="OhU-jC-iAi"/>
@@ -605,14 +718,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9r-E8-bH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4138.3999999999996" y="103.89805097451276"/>
+            <point key="canvasLocation" x="4857" y="98"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ojw-MB-feO"/>
         <segue reference="fuS-8s-q7S"/>
         <segue reference="fDd-hj-Eai"/>
         <segue reference="d4z-Sl-9aY"/>
-        <segue reference="FRo-86-wYb"/>
+        <segue reference="b89-NS-JvA"/>
+        <segue reference="WNW-NF-S1A"/>
+        <segue reference="aD4-pG-xOR"/>
     </inferredMetricsTieBreakers>
 </document>

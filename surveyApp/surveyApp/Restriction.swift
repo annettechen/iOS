@@ -8,16 +8,18 @@
 
 import Foundation
 import Alamofire
+import CoreLocation
 
-class Restriction {
+class Restriction: NSObject{
     var surveyID = Int()
-    var genderRestriction = [Int]()
+    var genderRestriction = [false, false, false]
     var ageRestriction = [Int]()
-    var ethnicityRestriction = [Int]()
-    var longitude = Float()
-    var latitude = Float()
+    var ethnicityRestriction = [false, false, false, false, false, false]
+    var longitude = CLLocationDegrees()
+    var latitude = CLLocationDegrees()
     var radius = Int()
     var numTakers = Int()
+    var locationManager = CLLocationManager()
     
     func sendRestrictionsToAPI(){
         let url = "https://ka-data.herokuapp.com/restrictions"
@@ -34,23 +36,37 @@ class Restriction {
         }
     }
     
-    func genderRestrictions(restrictionID: Int){
-        // create gender tables for all acceptable genders and create restriction_gender tables to connect
-        let genderURL = "https://ka-data.herokuapp.com/genders"
-        let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_genders"
-        for gender in genderRestriction {
-            let genderParams: Parameters = ["gender[name]":gender] as [String:Int]
-            Alamofire.request(genderURL, method: .post, parameters: genderParams).responseJSON { response in
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
-            }
-            let restricGenderParams: Parameters = ["restriction_gender[restriction_id]":restrictionID, "restriction_gender[gender_id]":gender] as [String:Int]
-            Alamofire.request(restrictionGenderURL, method: .post, parameters: genderParams).responseJSON { response in
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                }
-            }
+//    func genderRestrictions(restrictionID: Int){
+//        // create gender tables for all acceptable genders and create restriction_gender tables to connect
+//        let genderURL = "https://ka-data.herokuapp.com/genders"
+//        let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_genders"
+//        for gender in genderRestriction {
+//            let genderParams: Parameters = ["gender[name]":gender] as [String:Int]
+//            Alamofire.request(genderURL, method: .post, parameters: genderParams).responseJSON { response in
+//                if let JSON = response.result.value {
+//                    print("JSON: \(JSON)")
+//                }
+//            }
+//            let restricGenderParams: Parameters = ["restriction_gender[restriction_id]":restrictionID, "restriction_gender[gender_id]":gender] as [String:Int]
+//            Alamofire.request(restrictionGenderURL, method: .post, parameters: genderParams).responseJSON { response in
+//                if let JSON = response.result.value {
+//                    print("JSON: \(JSON)")
+//                }
+//            }
+//        }
+//    }
+    
+    func getCurrentLocation() {
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
+        if let currLocation = locationManager.location {
+            self.latitude = currLocation.coordinate.latitude
+            self.longitude = currLocation.coordinate.longitude
         }
     }
 }
