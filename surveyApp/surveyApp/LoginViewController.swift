@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if FBSDKAccessToken.current().tokenString != nil {
+        if FBSDKAccessToken.current() != nil {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
         }
         
@@ -27,6 +27,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
+//    func isLoggedIn() {
+//        let accessToken = FBSDKAccessToken.current().tokenString;
+//        return accessToken != nil;
+//    }
+//    
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Did log out of facebook")
     }
