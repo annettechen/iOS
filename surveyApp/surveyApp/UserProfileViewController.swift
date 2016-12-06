@@ -19,7 +19,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var tableView: UITableView!
 
-    let user = User(id: 2, name:"mary", email:"mary", gender:"female", age:20, ethnicity: "white", points: 10 )
+    let user = User()
 
 
     override func viewDidLoad() {
@@ -29,6 +29,13 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+        let json = user.getInfoFromAPI(id: 2)
+        print(user.name)
+        name.text = user.name
+        point_total.text = String(user.points)
+        age.text = String(user.age)
+        gender.text = user.gender
+        ethnicity.text = user.ethnicity
     }
     
     override func didReceiveMemoryWarning() {
