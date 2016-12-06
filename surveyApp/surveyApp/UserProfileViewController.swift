@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+
 
 class UserProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -19,23 +21,18 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var tableView: UITableView!
 
-    let user = User()
+    var user = User()
+    var json:JSON = ""
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         let cellNib = UINib(nibName: "SurveyCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
-        let json = user.getInfoFromAPI(id: 2)
-        print(user.name)
-        name.text = user.name
-        point_total.text = String(user.points)
-        age.text = String(user.age)
-        gender.text = user.gender
-        ethnicity.text = user.ethnicity
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,18 +41,28 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func editProfile(){
-        user.getInfoFromAPI(id: 2)
+    }
+    
+    func populateLabels(){
+        self.name.text = self.user.name
+        self.point_total.text = String(self.user.points)
+        self.age.text = String(self.user.age)
+        self.gender.text = self.user.gender
+        self.ethnicity.text = self.user.ethnicity
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as!SurveyCell
-        cell.name?.text = "Education Survey"
-        cell.points?.text = "10"
+        user.getInfoFromAPI(id: 2){
+            self.populateLabels()
+            cell.name?.text = self.user.surveys[indexPath[1]].title
+            cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
+        }
         return cell
     }
 }
