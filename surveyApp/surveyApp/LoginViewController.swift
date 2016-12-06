@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let accessToken = FBSDKAccessToken.current().tokenString {
+        if FBSDKAccessToken.current().tokenString != nil {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
         }
         
@@ -36,7 +36,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             print(error)
             return
         }
-        
+        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
         print("Successfully logged in with facebook...")
     }
     
