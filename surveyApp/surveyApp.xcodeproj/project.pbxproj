@@ -33,6 +33,8 @@
 		22FF40D41DD293DC0019C2C4 /* surveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40D31DD293DC0019C2C4 /* surveyAppTests.swift */; };
 		22FF40DF1DD293DC0019C2C4 /* surveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40DE1DD293DC0019C2C4 /* surveyAppUITests.swift */; };
 		73CBC3F9F8D05723A1ED74DB /* Pods_surveyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627555E21C9FB9E85AF2D772 /* Pods_surveyAppTests.framework */; };
+		80EE2C211DF6928B00E1F10E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE2C201DF6928B00E1F10E /* LoginViewController.swift */; };
+		80EE2C271DF69BD800E1F10E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EE2C261DF69BD800E1F10E /* Login.storyboard */; };
 		E3FEE216BD1BE84CC179172D /* Pods_surveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B18C55EF16327B630A291 /* Pods_surveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,9 @@
 		22FF40E01DD293DC0019C2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		627555E21C9FB9E85AF2D772 /* Pods_surveyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_surveyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF87698DD1623A3C2821C2D /* Pods-surveyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-surveyAppTests/Pods-surveyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		80EE2C201DF6928B00E1F10E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = surveyApp/LoginViewController.swift; sourceTree = "<group>"; };
+		80EE2C251DF6978A00E1F10E /* surveyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = surveyApp.entitlements; sourceTree = "<group>"; };
+		80EE2C261DF69BD800E1F10E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8736FC8758DCE72B4675A912 /* Pods-surveyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-surveyAppTests/Pods-surveyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD1A689B48C85B009D20AF1 /* Pods-surveyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-surveyApp/Pods-surveyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9BFD299E1B2B410804A4582F /* Pods-surveyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-surveyAppUITests/Pods-surveyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +205,8 @@
 		22FF40BD1DD293DB0019C2C4 /* surveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				80EE2C251DF6978A00E1F10E /* surveyApp.entitlements */,
+				80EE2C241DF6967500E1F10E /* Login */,
 				2230E19E1DF1F2050053C3F9 /* Survey */,
 				222755661DF09E7600B36590 /* User */,
 				22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */,
@@ -230,6 +237,16 @@
 				22FF40E01DD293DC0019C2C4 /* Info.plist */,
 			);
 			path = surveyAppUITests;
+			sourceTree = "<group>";
+		};
+		80EE2C241DF6967500E1F10E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				80EE2C201DF6928B00E1F10E /* LoginViewController.swift */,
+				80EE2C261DF69BD800E1F10E /* Login.storyboard */,
+			);
+			name = Login;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C3393938FC9127162514890C /* Frameworks */ = {
@@ -319,7 +336,13 @@
 				TargetAttributes = {
 					22FF40BA1DD293DB0019C2C4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8Q6DRCY4SK;
 						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					22FF40CE1DD293DC0019C2C4 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -360,6 +383,7 @@
 			files = (
 				22FF40C91DD293DB0019C2C4 /* LaunchScreen.storyboard in Resources */,
 				22FF40C61DD293DB0019C2C4 /* Assets.xcassets in Resources */,
+				80EE2C271DF69BD800E1F10E /* Login.storyboard in Resources */,
 				2290EE801DF23D370079DCCD /* SurveyMonkey.storyboard in Resources */,
 				22FF40C41DD293DB0019C2C4 /* Main.storyboard in Resources */,
 				222755651DF09E6B00B36590 /* UserProfile.storyboard in Resources */,
@@ -539,6 +563,7 @@
 				22F5A8C71DF35D9100DE04E1 /* SMLocationCreateViewController.swift in Sources */,
 				2230E1A81DF223310053C3F9 /* Survey.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
+				80EE2C211DF6928B00E1F10E /* LoginViewController.swift in Sources */,
 				22F5A8C91DF35DD900DE04E1 /* SMNumberCreateViewController.swift in Sources */,
 				2202F5E31DF2BA02008A1648 /* Restriction.swift in Sources */,
 				225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */,
@@ -689,6 +714,8 @@
 			baseConfigurationReference = 8CD1A689B48C85B009D20AF1 /* Pods-surveyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
+				DEVELOPMENT_TEAM = 8Q6DRCY4SK;
 				INFOPLIST_FILE = surveyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -703,6 +730,8 @@
 			baseConfigurationReference = D9F20D79C52F3AF21ED10A65 /* Pods-surveyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
+				DEVELOPMENT_TEAM = 8Q6DRCY4SK;
 				INFOPLIST_FILE = surveyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
