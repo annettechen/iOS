@@ -688,10 +688,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CD1A689B48C85B009D20AF1 /* Pods-surveyApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = surveyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -703,10 +702,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9F20D79C52F3AF21ED10A65 /* Pods-surveyApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = surveyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
