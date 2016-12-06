@@ -8,6 +8,7 @@ target 'surveyApp' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'SwiftyJSON'
 
   # Pods for surveyApp
 

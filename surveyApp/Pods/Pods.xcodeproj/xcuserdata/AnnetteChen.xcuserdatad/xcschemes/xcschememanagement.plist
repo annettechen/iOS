@@ -2,6 +2,54 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-surveyApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-surveyAppTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-surveyAppUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
@@ -10,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>6F7328D04802662F08B2223B9F7B3F28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7339883D133AA0915E0AA76129F96D18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -34,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E44ED0EF854909371FFEEEB38E43A0EB</key>
+		<key>E6D15E88F64A2BEF7BB7C999BA1C2628</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6D15E88F64A2BEF7BB7C999BA1C2628</key>
+		<key>F7D5AB88F3AD94C93EB146C770E110D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
