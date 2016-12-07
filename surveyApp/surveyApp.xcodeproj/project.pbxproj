@@ -40,6 +40,8 @@
 		80EE2C211DF6928B00E1F10E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE2C201DF6928B00E1F10E /* LoginViewController.swift */; };
 		80EE2C271DF69BD800E1F10E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EE2C261DF69BD800E1F10E /* Login.storyboard */; };
 		80EE2C291DF6C4CA00E1F10E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE2C281DF6C4CA00E1F10E /* TabBarViewController.swift */; };
+		E32D3CA31DF8061A007BA459 /* SMTakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */; };
+		E32D3CA61DF808FD007BA459 /* SurveyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */; };
 		E3FEE216BD1BE84CC179172D /* Pods_surveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B18C55EF16327B630A291 /* Pods_surveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,8 @@
 		C62838600199FA1714338A31 /* Pods_surveyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_surveyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EDE4988816B4394766ED2F /* Pods-surveyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-surveyAppUITests/Pods-surveyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D9F20D79C52F3AF21ED10A65 /* Pods-surveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-surveyApp/Pods-surveyApp.release.xcconfig"; sourceTree = "<group>"; };
+		E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMTakerViewController.swift; path = surveyApp/SMTakerViewController.swift; sourceTree = "<group>"; };
+		E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,7 @@
 				80EE2C241DF6967500E1F10E /* Login */,
 				2230E19E1DF1F2050053C3F9 /* Survey */,
 				801A00C21DF7921F00DAFDEA /* FilteredSurveys */,
+				E32D3CA41DF808A0007BA459 /* Taker */,
 				222755661DF09E7600B36590 /* User */,
 				22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */,
 				22FF40C01DD293DB0019C2C4 /* ViewController.swift */,
@@ -281,6 +286,16 @@
 				C62838600199FA1714338A31 /* Pods_surveyAppUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E32D3CA41DF808A0007BA459 /* Taker */ = {
+			isa = PBXGroup;
+			children = (
+				E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */,
+				E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */,
+			);
+			name = Taker;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,6 +594,7 @@
 				22F5A8C51DF35D3300DE04E1 /* SMEthnicityCreateViewController.swift in Sources */,
 				222755681DF09EAC00B36590 /* UserProfileViewController.swift in Sources */,
 				22F5A8C31DF35CF800DE04E1 /* SMAgeCreateViewController.swift in Sources */,
+				E32D3CA61DF808FD007BA459 /* SurveyDetailViewModel.swift in Sources */,
 				801A00C01DF787E500DAFDEA /* FilteredSurveyCell.swift in Sources */,
 				22F5A8CB1DF3613F00DE04E1 /* SMDoneCreateViewController.swift in Sources */,
 				80EE2C291DF6C4CA00E1F10E /* TabBarViewController.swift in Sources */,
@@ -593,6 +609,7 @@
 				2230E1A81DF223310053C3F9 /* Survey.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
 				80EE2C211DF6928B00E1F10E /* LoginViewController.swift in Sources */,
+				E32D3CA31DF8061A007BA459 /* SMTakerViewController.swift in Sources */,
 				22F5A8C91DF35DD900DE04E1 /* SMNumberCreateViewController.swift in Sources */,
 				2202F5E31DF2BA02008A1648 /* Restriction.swift in Sources */,
 				225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */,
@@ -746,7 +763,7 @@
 				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
 				DEVELOPMENT_TEAM = 8Q6DRCY4SK;
 				INFOPLIST_FILE = surveyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -762,7 +779,7 @@
 				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
 				DEVELOPMENT_TEAM = 8Q6DRCY4SK;
 				INFOPLIST_FILE = surveyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
