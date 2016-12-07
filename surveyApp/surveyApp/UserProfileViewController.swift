@@ -52,9 +52,6 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func editProfile(){
-    }
-    
     func populateLabels(){
         self.name.text = self.user.name
         self.point_total.text = String(self.user.points)
@@ -73,6 +70,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         
         recentSurveys.setTitleColor(UIColor.blue, for: .normal)
         createdSurveys.setTitleColor(UIColor.black, for: .normal)
+        self.tableView.reloadData()
     }
     
     @IBAction func toggleCreatedSurveys() {
@@ -81,6 +79,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         
         recentSurveys.setTitleColor(UIColor.black, for: .normal)
         createdSurveys.setTitleColor(UIColor.blue, for: .normal)
+        self.tableView.reloadData()
     }
 
     
@@ -94,7 +93,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
             user.getInfoFromAPI(id: 2){
                 self.populateLabels()
                 cell.name?.text = self.user.surveys[indexPath[1]].title
-                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
+                cell.points?.text = "- \(self.user.surveys[indexPath[1]].points) points"
             }
         }
         else {
