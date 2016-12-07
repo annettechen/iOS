@@ -10,7 +10,11 @@ import UIKit
 import Alamofire
 import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var user = User()
     
     @IBAction func userProfileAction(sender: AnyObject) {
         // Create a new "Storyboard2" instance.
@@ -38,6 +42,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let cellNib = UINib(nibName: "FilteredSurveyCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "FilteredSurveyCell")
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +54,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FilteredSurveyCell", for: indexPath as IndexPath) as!FilteredSurveyCell
+//        user.getInfoFromAPI(id: 2){
+//            self.populateLabels()
+//            cell.name?.text = self.user.surveys[indexPath[1]].title
+//            cell.points?.text = "\(self.user.surveys[indexPath[1]].points) points"
+//        }
+        return cell
+    }
+    
 
 }
-
