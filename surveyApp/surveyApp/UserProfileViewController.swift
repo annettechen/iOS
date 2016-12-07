@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import FBSDKLoginKit
+
 
 
 class UserProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -40,6 +42,9 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+        
+        recentSurveys.setTitleColor(UIColor.blue, for: .normal)
+        createdSurveys.setTitleColor(UIColor.black, for: .normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,13 +62,28 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         self.gender.text = self.user.gender
         self.ethnicity.text = self.user.ethnicity
     }
+    @IBAction func logOut() {
+        FBSDKLoginManager().logOut()
 
-    @IBAction func toggleProfile() {
-        
-        recentSurveysClicked = !recentSurveysClicked
-        createdSurveysClicked = !createdSurveysClicked
-    
     }
+    
+    @IBAction func toggleRecentSurveys() {
+        recentSurveysClicked = true
+        createdSurveysClicked = false
+        
+        recentSurveys.setTitleColor(UIColor.blue, for: .normal)
+        createdSurveys.setTitleColor(UIColor.black, for: .normal)
+    }
+    
+    @IBAction func toggleCreatedSurveys() {
+        recentSurveysClicked = false
+        createdSurveysClicked = true
+        
+        recentSurveys.setTitleColor(UIColor.black, for: .normal)
+        createdSurveys.setTitleColor(UIColor.blue, for: .normal)
+    }
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
