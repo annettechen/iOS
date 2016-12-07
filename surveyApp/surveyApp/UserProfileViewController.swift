@@ -92,15 +92,17 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         if recentSurveysClicked {
             user.getInfoFromAPI(id: 2){
                 self.populateLabels()
+                cell.surveyTaker?.text = "You"
                 cell.name?.text = self.user.surveys[indexPath[1]].title
-                cell.points?.text = "- \(self.user.surveys[indexPath[1]].points) points"
+                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
             }
         }
         else {
             user.getSurveysUserCreatedFromAPI(id: 2){
                 self.populateLabels()
+                cell.surveyTaker?.text = self.user.name
                 cell.name?.text = self.user.createdSurveys[indexPath[1]].title
-                cell.points?.text = self.user.createdSurveys[indexPath[1]].title
+                cell.points?.text = "- \(self.user.createdSurveys[indexPath[1]].points) points"
             }
         }
         return cell

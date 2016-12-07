@@ -10,6 +10,7 @@ import UIKit
 
 class SurveyCell: UITableViewCell {
 
+    @IBOutlet weak var surveyTaker: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var points: UILabel!
     
