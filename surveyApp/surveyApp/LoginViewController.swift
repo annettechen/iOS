@@ -15,7 +15,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         if FBSDKAccessToken.current() != nil {
-            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
+            self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Tab", strStoryboard: "Main")
         }
         
         else {
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             print(error)
             return
         }
-        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
+        self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Tab", strStoryboard: "Main")
         print("Successfully logged in with facebook...")
     }
     
