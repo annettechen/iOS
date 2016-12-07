@@ -13,7 +13,7 @@ import CoreLocation
 class Restriction: NSObject{
     var surveyID = Int()
     var genderRestriction = [false, false, false]
-    var ageRestriction = [Int]()
+    var ageRestriction = [Int(), Int()]
     var ethnicityRestriction = [false, false, false, false, false, false]
     var longitude = CLLocationDegrees()
     var latitude = CLLocationDegrees()

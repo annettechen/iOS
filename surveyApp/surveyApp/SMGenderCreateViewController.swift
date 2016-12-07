@@ -15,12 +15,14 @@ class SMGenderCreateViewController: UIViewController {
     @IBOutlet weak var other: UIButton!
     
     var restriction = Restriction()
+    var survey: Survey?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         male.setTitleColor(UIColor.gray, for: .normal)
         female.setTitleColor(UIColor.gray, for: .normal)
         other.setTitleColor(UIColor.gray, for: .normal)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,5 +50,16 @@ class SMGenderCreateViewController: UIViewController {
             restriction.genderRestriction[index] = false
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAgeCreate" {
+            if let ageCreateVC = segue.destination as? SMAgeCreateViewController{
+                ageCreateVC.restriction = restriction
+                ageCreateVC.survey = survey
+            }
+        }
+    }
+    
+    
 
 }
