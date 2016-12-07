@@ -21,6 +21,7 @@ class User {
     var points = Int()
     var surveys = [Survey]()
     var takeableSurveys = [Survey]()
+    var createdSurveys = [Survey]()
     
     //Location Variables
     var longitude = CLLocationDegrees()
@@ -31,6 +32,7 @@ class User {
     let genders = ["Male", "Female", "Other"]
     let ethnicities = ["Hispanic or Latino","American Indian or Alaskan Native","Asian","African American","Native Hawaiian or Other Pacific Islander","White"]
     
+    //MARK: Data Collection From API
     func getInfoFromAPI(id:Int, completion: @escaping (() -> Void)){
         var jsonResult:JSON = ""
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/info"
@@ -44,6 +46,18 @@ class User {
         }
     }
     
+    func getSurveysUserCreatedFromAPI(id: Int, completion: @escaping(() -> Void)) {
+        var jsonResult:JSON = ""
+        let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/createdSurveys"
+        
+        Alamofire.request(url).responseJSON {response in
+            if let json = response.result.value {
+                jsonResult = JSON(json)
+                self.fillTakeableSurveyData(surveyJSON: jsonResult)
+            }
+            completion()
+        }
+    }
     func getSurveysUserCanTakeFromAPI(id:Int, completion: @escaping (() -> Void)){
         var jsonResult:JSON = ""
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/takeableSurveys"
@@ -71,6 +85,20 @@ class User {
         fillSurveyData(surveyJSON: json["eligible_surveys"])
     }
     
+    //MARK: Filling Various Survey local variables, ex: takeable, created, etc.
+    
+    func fillCreatedSurveyData(surveyJSON: JSON){
+        for index in 0..<surveyJSON.count{
+            let new = Survey()
+            new.title = surveyJSON[index]["name"].string!
+            new.description = surveyJSON[index]["description"].string!
+            //            new.est_time = surveyJSON[index]["est_time"].int!
+            new.points = surveyJSON[index]["points"].int!
+            self.createdSurveys.append(new)
+        }
+        print(takeableSurveys.count)
+    }
+
     func fillTakeableSurveyData(surveyJSON: JSON){
         for index in 0..<surveyJSON.count{
             let new = Survey()

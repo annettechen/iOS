@@ -20,7 +20,13 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var ethnicity: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var recentSurveys: UIButton!
+    @IBOutlet weak var createdSurveys: UIButton!
 
+    var recentSurveysClicked = true
+    var createdSurveysClicked = false
+    
     var user = User()
     var json:JSON = ""
 
@@ -28,6 +34,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
         
         let cellNib = UINib(nibName: "SurveyCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
@@ -51,17 +58,31 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         self.ethnicity.text = self.user.ethnicity
     }
 
+    @IBAction func toggleProfile() {
+        
+        recentSurveysClicked = !recentSurveysClicked
+        createdSurveysClicked = !createdSurveysClicked
     
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as!SurveyCell
-        user.getInfoFromAPI(id: 2){
-            self.populateLabels()
-            cell.name?.text = self.user.surveys[indexPath[1]].title
-            cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
+        if recentSurveysClicked {
+            user.getInfoFromAPI(id: 2){
+                self.populateLabels()
+                cell.name?.text = self.user.surveys[indexPath[1]].title
+                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
+            }
+        }
+        else {
+            user.getSurveysUserCreatedFromAPI(id: 2){
+                self.populateLabels()
+                cell.name?.text = self.user.createdSurveys[indexPath[1]].title
+                cell.points?.text = self.user.createdSurveys[indexPath[1]].title
+            }
         }
         return cell
     }
