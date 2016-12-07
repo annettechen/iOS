@@ -35,6 +35,8 @@
 		73CBC3F9F8D05723A1ED74DB /* Pods_surveyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627555E21C9FB9E85AF2D772 /* Pods_surveyAppTests.framework */; };
 		801A00C01DF787E500DAFDEA /* FilteredSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A00BE1DF787E500DAFDEA /* FilteredSurveyCell.swift */; };
 		801A00C11DF787E500DAFDEA /* FilteredSurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 801A00BF1DF787E500DAFDEA /* FilteredSurveyCell.xib */; };
+		801A00C41DF7944500DAFDEA /* ProfileSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 801A00C31DF7944500DAFDEA /* ProfileSetup.storyboard */; };
+		801A00C61DF7978A00DAFDEA /* ProfileSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A00C51DF7978A00DAFDEA /* ProfileSetupViewController.swift */; };
 		80EE2C211DF6928B00E1F10E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE2C201DF6928B00E1F10E /* LoginViewController.swift */; };
 		80EE2C271DF69BD800E1F10E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EE2C261DF69BD800E1F10E /* Login.storyboard */; };
 		80EE2C291DF6C4CA00E1F10E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE2C281DF6C4CA00E1F10E /* TabBarViewController.swift */; };
@@ -92,8 +94,10 @@
 		22FF40E01DD293DC0019C2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		627555E21C9FB9E85AF2D772 /* Pods_surveyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_surveyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF87698DD1623A3C2821C2D /* Pods-surveyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-surveyAppTests/Pods-surveyAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		801A00BE1DF787E500DAFDEA /* FilteredSurveyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredSurveyCell.swift; sourceTree = "<group>"; };
-		801A00BF1DF787E500DAFDEA /* FilteredSurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilteredSurveyCell.xib; sourceTree = "<group>"; };
+		801A00BE1DF787E500DAFDEA /* FilteredSurveyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilteredSurveyCell.swift; path = surveyApp/FilteredSurveyCell.swift; sourceTree = "<group>"; };
+		801A00BF1DF787E500DAFDEA /* FilteredSurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilteredSurveyCell.xib; path = surveyApp/FilteredSurveyCell.xib; sourceTree = "<group>"; };
+		801A00C31DF7944500DAFDEA /* ProfileSetup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileSetup.storyboard; sourceTree = "<group>"; };
+		801A00C51DF7978A00DAFDEA /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
 		80EE2C201DF6928B00E1F10E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = surveyApp/LoginViewController.swift; sourceTree = "<group>"; };
 		80EE2C251DF6978A00E1F10E /* surveyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = surveyApp.entitlements; sourceTree = "<group>"; };
 		80EE2C261DF69BD800E1F10E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -214,12 +218,11 @@
 				80EE2C251DF6978A00E1F10E /* surveyApp.entitlements */,
 				80EE2C241DF6967500E1F10E /* Login */,
 				2230E19E1DF1F2050053C3F9 /* Survey */,
+				801A00C21DF7921F00DAFDEA /* FilteredSurveys */,
 				222755661DF09E7600B36590 /* User */,
 				22FF40BE1DD293DB0019C2C4 /* AppDelegate.swift */,
 				22FF40C01DD293DB0019C2C4 /* ViewController.swift */,
 				22FF40C21DD293DB0019C2C4 /* Main.storyboard */,
-				801A00BE1DF787E500DAFDEA /* FilteredSurveyCell.swift */,
-				801A00BF1DF787E500DAFDEA /* FilteredSurveyCell.xib */,
 				80EE2C281DF6C4CA00E1F10E /* TabBarViewController.swift */,
 				22FF40C51DD293DB0019C2C4 /* Assets.xcassets */,
 				22FF40C71DD293DB0019C2C4 /* LaunchScreen.storyboard */,
@@ -248,10 +251,22 @@
 			path = surveyAppUITests;
 			sourceTree = "<group>";
 		};
+		801A00C21DF7921F00DAFDEA /* FilteredSurveys */ = {
+			isa = PBXGroup;
+			children = (
+				801A00BE1DF787E500DAFDEA /* FilteredSurveyCell.swift */,
+				801A00BF1DF787E500DAFDEA /* FilteredSurveyCell.xib */,
+			);
+			name = FilteredSurveys;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		80EE2C241DF6967500E1F10E /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				80EE2C201DF6928B00E1F10E /* LoginViewController.swift */,
+				801A00C51DF7978A00DAFDEA /* ProfileSetupViewController.swift */,
+				801A00C31DF7944500DAFDEA /* ProfileSetup.storyboard */,
 				80EE2C261DF69BD800E1F10E /* Login.storyboard */,
 			);
 			name = Login;
@@ -390,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801A00C41DF7944500DAFDEA /* ProfileSetup.storyboard in Resources */,
 				801A00C11DF787E500DAFDEA /* FilteredSurveyCell.xib in Resources */,
 				22FF40C91DD293DB0019C2C4 /* LaunchScreen.storyboard in Resources */,
 				22FF40C61DD293DB0019C2C4 /* Assets.xcassets in Resources */,
@@ -568,6 +584,7 @@
 				80EE2C291DF6C4CA00E1F10E /* TabBarViewController.swift in Sources */,
 				2249E00F1DF1088100866EF9 /* SurveyCell.swift in Sources */,
 				2230E1A01DF1F2120053C3F9 /* SurveyModel.swift in Sources */,
+				801A00C61DF7978A00DAFDEA /* ProfileSetupViewController.swift in Sources */,
 				2290EE821DF23F210079DCCD /* SMBasicCreateViewController.swift in Sources */,
 				22F5A8C01DF35C8900DE04E1 /* SMGenderCreateViewController.swift in Sources */,
 				22FF40C11DD293DB0019C2C4 /* ViewController.swift in Sources */,
