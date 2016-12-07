@@ -13,15 +13,16 @@ import MapKit
 class SMLocationCreateViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
-    let restriction = Restriction()
+    var restriction: Restriction?
+    var survey: Survey?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        restriction.getCurrentLocation()
-        let initialLocation = CLLocation(latitude: restriction.latitude, longitude: restriction.longitude)
+        restriction?.getCurrentLocation()
+        let initialLocation = CLLocation(latitude: (restriction?.latitude)!, longitude: (restriction?.longitude)!)
         centerMapOnLocation(location: initialLocation)
         let droppedPin = MKPointAnnotation()
-        droppedPin.coordinate = CLLocationCoordinate2D(latitude: restriction.latitude, longitude: restriction.longitude)
+        droppedPin.coordinate = CLLocationCoordinate2D(latitude: (restriction?.latitude)!, longitude: (restriction?.longitude)!)
         droppedPin.title = "You Are Here"
         mapView.addAnnotation(droppedPin)
     }
@@ -36,4 +37,14 @@ class SMLocationCreateViewController: UIViewController {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNumberCreate" {
+            if let numberCreateVC = segue.destination as? SMNumberCreateViewController{
+                numberCreateVC.restriction = restriction!
+                numberCreateVC.survey = survey!
+            }
+        }
+    }
+
 }

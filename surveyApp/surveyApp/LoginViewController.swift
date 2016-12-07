@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         if FBSDKAccessToken.current() != nil {
+            print(FBSDKAccessToken.current())
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Home", strStoryboard: "Main")
         }
         
