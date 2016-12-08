@@ -108,7 +108,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
-    func logOut() {
+    @IBAction func logOut() {
         let manager = FBSDKLoginManager()
         manager.logOut()
         print("logging out")

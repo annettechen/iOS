@@ -13,9 +13,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("hi")
         
         if FBSDKAccessToken.current() != nil {
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Tab", strStoryboard: "Main")
+            print("loggedin")
         }
         
         else {
@@ -23,12 +25,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.view.addSubview(loginButton)
             loginButton.delegate = self
             loginButton.center = self.view.center
-            
         }
-    }
-    
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
-        
     }
     
 //    func isLoggedIn() {
