@@ -16,9 +16,10 @@ class ProfileSetupViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var genderView: UIPickerView!
     @IBOutlet weak var ethnicityView: UIPickerView!
     
+    
     var genderDataSource = ["Male", "Female", "Other"];
     
-    var ethnicityDataSource = ["Hispanic", "Native American", "Asian", "African American", "Pacific Islander", "White"];
+    var ethnicityDataSource = ["Hispanic or Latino","American Indian or Alaskan Native","Asian","African American","Native Hawaiian or Other Pacific Islander","White"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -35,8 +36,10 @@ class ProfileSetupViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == genderView {
+            user.gender = genderDataSource[row]
             return genderDataSource[row]
         } else if pickerView == ethnicityView {
+            user.ethnicity = ethnicityDataSource[row]
             return ethnicityDataSource[row]
         }
         return ""
@@ -53,14 +56,27 @@ class ProfileSetupViewController: UIViewController, UIPickerViewDataSource, UIPi
         ethnicityView.delegate = self
         ethnicityView.dataSource = self
         
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func finish(sender: AnyObject) {
+        user.name = name.text!
+        user.age = Int(age.text!)!
+        // Create a new "Storyboard2" instance.
+        let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
+        
+        // Create an instance of the storyboard's initial view controller.
+        let controller = storyboard.instantiateViewController(withIdentifier: "UserProfileController") as UIViewController
+        
+        // Display the new view controller.
+        present(controller, animated: true, completion: nil)
+    }
+    
+    
     
 
     /*
