@@ -41,6 +41,7 @@
 		80EE2C291DF6C4CA00E1F10E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EE2C281DF6C4CA00E1F10E /* TabBarViewController.swift */; };
 		E32D3CA31DF8061A007BA459 /* SMTakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */; };
 		E32D3CA61DF808FD007BA459 /* SurveyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */; };
+		E36CEAE41DFA16B100C71369 /* SurveyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CEAE31DFA16B100C71369 /* SurveyUser.swift */; };
 		E3FEE216BD1BE84CC179172D /* Pods_surveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B18C55EF16327B630A291 /* Pods_surveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		D9F20D79C52F3AF21ED10A65 /* Pods-surveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-surveyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-surveyApp/Pods-surveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMTakerViewController.swift; path = surveyApp/SMTakerViewController.swift; sourceTree = "<group>"; };
 		E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewModel.swift; sourceTree = "<group>"; };
+		E36CEAE31DFA16B100C71369 /* SurveyUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				2230E1A71DF223310053C3F9 /* Survey.swift */,
 				2290EE7F1DF23D370079DCCD /* SurveyMonkey.storyboard */,
 				2202F5E21DF2BA02008A1648 /* Restriction.swift */,
+				E36CEAE31DFA16B100C71369 /* SurveyUser.swift */,
 			);
 			name = Survey;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				80EE2C211DF6928B00E1F10E /* LoginViewController.swift in Sources */,
 				E32D3CA31DF8061A007BA459 /* SMTakerViewController.swift in Sources */,
 				22F5A8C91DF35DD900DE04E1 /* SMNumberCreateViewController.swift in Sources */,
+				E36CEAE41DFA16B100C71369 /* SurveyUser.swift in Sources */,
 				2202F5E31DF2BA02008A1648 /* Restriction.swift in Sources */,
 				225A723F1DEE8E01006BA37E /* SurveyMonkeyAPI.swift in Sources */,
 			);
