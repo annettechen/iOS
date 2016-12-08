@@ -40,6 +40,7 @@ class User {
         Alamofire.request(url).responseJSON {response in
             if let json = response.result.value {
                 jsonResult = JSON(json)
+                print(jsonResult)
                 self.fillUserData(json: jsonResult)
             }
             completion()
@@ -61,7 +62,6 @@ class User {
     func getSurveysUserCanTakeFromAPI(id:Int, completion: @escaping (() -> Void)){
         var jsonResult:JSON = ""
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/takeableSurveys"
-        
         Alamofire.request(url).responseJSON {response in
             if let json = response.result.value {
                 jsonResult = JSON(json)
@@ -76,11 +76,13 @@ class User {
         self.id = json["demographics"]["id"].int!
         self.name = json["demographics"]["name"].string!
         self.email = json["demographics"]["email"].string!
-        let genderIndex = json["demographics"]["gender"].int!
-        self.gender = genders[genderIndex]
+        print("before getting gender..")
+        let genderIndex = json["demographics"]["gender_id"].int!
+        print("getting gender..")
+        self.gender = genders[genderIndex-1]
         self.age = json["demographics"]["age"].int!
-        let ethnicityIndex = json["demographics"]["ethnicity"].int!
-        self.ethnicity = ethnicities[ethnicityIndex]
+        let ethnicityIndex = json["demographics"]["ethnicity_id"].int!
+        self.ethnicity = ethnicities[ethnicityIndex-1]
         self.points = json["demographics"]["points"].int!
         fillSurveyData(surveyJSON: json["eligible_surveys"])
     }
