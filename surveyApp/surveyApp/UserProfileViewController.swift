@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
+import FBSDKCoreKit
 
 
 
@@ -24,7 +25,10 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var recentSurveys: UIButton!
     @IBOutlet weak var createdSurveys: UIButton!
+    
 
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
+    
     var recentSurveysClicked = true
     var createdSurveysClicked = false
     
@@ -56,10 +60,6 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         self.demographics.text = "\(String(self.user.age)) years old, \(self.user.gender), \(self.user.ethnicity)"
         self.point_total.text = String(self.user.points)
     }
-    @IBAction func logOut() {
-        FBSDKLoginManager().logOut()
-
-    }
     
     @IBAction func toggleRecentSurveys() {
         recentSurveysClicked = true
@@ -90,20 +90,27 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
             print("recent survey clicked")
             user.getInfoFromAPI(id: 1){
                 self.populateLabels()
-//                print("after populate labels")
-//                cell.name?.text = self.user.surveys[indexPath[1]].title
-//                cell.surveyDescription?.text = ""
-//                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
+                print("after populate labels")
+                cell.name?.text = self.user.surveys[indexPath[1]].title
+                cell.surveyDescription?.text = ""
+                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
             }
         }
-//        else {
-//            user.getSurveysUserCreatedFromAPI(id: 1){
-//                self.populateLabels()
-//                cell.name?.text = self.user.createdSurveys[indexPath[1]].title
-//                cell.surveyDescription?.text = self.user.createdSurveys[indexPath[1]].description
-//                cell.points?.text = ""
-//            }
-//        }
+        else {
+            user.getSurveysUserCreatedFromAPI(id: 1){
+                self.populateLabels()
+                cell.name?.text = self.user.createdSurveys[indexPath[1]].title
+                cell.surveyDescription?.text = self.user.createdSurveys[indexPath[1]].description
+                cell.points?.text = ""
+            }
+        }
         return cell
+    }
+    
+    
+    func logOut() {
+        let manager = FBSDKLoginManager()
+        manager.logOut()
+        print("logging out")
     }
 }

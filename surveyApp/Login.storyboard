@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="170-Ma-JJO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MsR-6P-SLh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,39 +10,22 @@
     </dependencies>
     <scenes>
         <!--LoginViewController-->
-        <scene sceneID="bxY-iM-9ne">
+        <scene sceneID="ciE-xK-PpO">
             <objects>
-                <viewController title="LoginViewController" id="SoU-Ne-Mv6" customClass="LoginViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginViewController" id="MsR-6P-SLh" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xLA-UQ-Q2U"/>
-                        <viewControllerLayoutGuide type="bottom" id="ycc-He-Zzv"/>
+                        <viewControllerLayoutGuide type="top" id="eMj-3n-CKp"/>
+                        <viewControllerLayoutGuide type="bottom" id="ebG-YK-b9t"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QEf-3m-0Ge">
+                    <view key="view" contentMode="scaleToFill" id="a5p-EC-lnk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qVk-Zh-xgb"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wtq-xw-1uS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJf-i8-eDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="205.54722638680661"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cP8-ou-sdp">
-            <objects>
-                <navigationController id="170-Ma-JJO" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xzD-3P-xfs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="SoU-Ne-Mv6" kind="relationship" relationship="rootViewController" id="W8f-TO-b6r"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ude-mI-6im" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-835" y="207"/>
+            <point key="canvasLocation" x="569" y="206"/>
         </scene>
     </scenes>
 </document>
