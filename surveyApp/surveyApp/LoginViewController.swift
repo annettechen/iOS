@@ -27,6 +27,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
+        
+    }
+    
 //    func isLoggedIn() {
 //        let accessToken = FBSDKAccessToken.current().tokenString;
 //        return accessToken != nil;
