@@ -28,7 +28,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     var recentSurveysClicked = true
     var createdSurveysClicked = false
     
-    var user = User()
+//    var user = User()
     var json:JSON = ""
 
 
@@ -52,9 +52,9 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func populateLabels(){
-        self.name.text = self.user.name
-        self.demographics.text = "\(String(self.user.age)) years old, \(self.user.gender), \(self.user.ethnicity)"
-        self.point_total.text = String(self.user.points)
+        self.name.text = user.name
+        self.demographics.text = "\(String(user.age)) years old, \(user.gender), \(user.ethnicity)"
+        self.point_total.text = String(user.points)
     }
     @IBAction func logOut() {
         FBSDKLoginManager().logOut()
@@ -81,19 +81,20 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as!SurveyCell
         if recentSurveysClicked == true {
             print("recent survey clicked")
-            user.getInfoFromAPI(id: 1){
+            user.getInfoFromAPI(id: 2){
                 self.populateLabels()
-//                print("after populate labels")
-//                cell.name?.text = self.user.surveys[indexPath[1]].title
-//                cell.surveyDescription?.text = ""
-//                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
+                print("after populate labels")
+                print(user.surveys.count)
+                cell.name?.text = user.surveys[indexPath[1]].title
+                cell.surveyDescription?.text = ""
+                cell.points?.text = "+ \(user.surveys[indexPath[1]].points) points"
             }
         }
 //        else {

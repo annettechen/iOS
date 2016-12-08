@@ -11,10 +11,25 @@ import FBSDKLoginKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    var exists: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if FBSDKAccessToken.current() != nil {
+            print("hellooooo")
+            user.FBToken = FBSDKAccessToken.current().tokenString
+            user.getAllUsers { json in
+                self.exists = user.findIDwithFBToken(result: json)
+                if(self.exists){
+                    self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Tab", strStoryboard: "Main")
+                } else {
+                    self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Prof", strStoryboard: "ProfileSetUp")
+                }
+            }
+            
+            // check if the token is in the db
+            // if it is, set user id = to that user
+            // if not, go to create profile
             self.openViewControllerOnIdentifierOnStoryBoard(strIdentifier: "Tab", strStoryboard: "Main")
         }
         
