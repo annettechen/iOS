@@ -17,11 +17,13 @@ extension ViewController: UISearchResultsUpdating {
     }
 }
 
+var user = User()
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var user = User()
+ 
     let viewModel = SurveyViewModel()
     
     //for Search

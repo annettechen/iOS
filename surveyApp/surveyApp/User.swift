@@ -22,6 +22,7 @@ class User {
     var surveys = [Survey]()
     var takeableSurveys = [Survey]()
     var createdSurveys = [Survey]()
+    var FBToken = String()
     
     //Location Variables
     var longitude = CLLocationDegrees()
@@ -32,12 +33,45 @@ class User {
     let genders = ["Male", "Female", "Other"]
     let ethnicities = ["Hispanic or Latino","American Indian or Alaskan Native","Asian","African American","Native Hawaiian or Other Pacific Islander","White"]
     
+    func getAllUsers(completion: @escaping ((_ json: JSON) -> Void)){
+        var jsonResult: JSON = ""
+        let url = "https://ka-data.herokuapp.com/users"
+        Alamofire.request(url).responseJSON {response in
+            if let json = response.result.value {
+                print(response.request)  // original URL request
+                print(response.response) // HTTP URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                jsonResult = JSON(json)
+                print(jsonResult.count)
+                
+            }
+            completion(jsonResult)
+        }
+    }
+    
+    func findIDwithFBToken(result: JSON) -> Bool{
+        for index in 0..<result.count {
+            if result[index]["fbtoken"].string! == user.FBToken{
+                user.id = result[index]["id"].int!
+                return true
+            }
+        }
+        return false
+    }
+    
+    
     //MARK: Data Collection From API
     func getInfoFromAPI(id:Int, completion: @escaping (() -> Void)){
         var jsonResult:JSON = ""
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/info"
         
         Alamofire.request(url).responseJSON {response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+
             if let json = response.result.value {
                 jsonResult = JSON(json)
                 print(jsonResult)
@@ -84,6 +118,7 @@ class User {
         let ethnicityIndex = json["demographics"]["ethnicity_id"].int!
         self.ethnicity = ethnicities[ethnicityIndex-1]
         self.points = json["demographics"]["points"].int!
+//        self.FBToken = json["demographics"]["fbtoken"].string!
         fillSurveyData(surveyJSON: json["eligible_surveys"])
     }
     
