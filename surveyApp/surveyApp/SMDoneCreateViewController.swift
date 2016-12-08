@@ -40,7 +40,7 @@ class SMDoneCreateViewController: UIViewController {
         survey?.sendSurveyToAPI(){id in
             self.restriction?.surveyID = id
             self.restriction?.sendRestrictionsToAPI(){
-                print(self.restriction)
+//                print(self.restriction)
             }
 
         }

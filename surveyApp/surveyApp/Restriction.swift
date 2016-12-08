@@ -38,6 +38,8 @@ class Restriction{
                 print("JSON: \(json)")
                 print(jsonResult["id"])
                 restrictionID = jsonResult["id"].int!
+                self.sendGenderRestrictions(restrictionID: restrictionID)
+                self.sendEthnicityRestrictions(restrictionID: restrictionID)
             }
         }
         completion()
@@ -49,6 +51,9 @@ class Restriction{
             if(genderRestriction[index]){
                 let restricGenderParams: Parameters = ["restriction_gender[restriction_id]":restrictionID, "restriction_gender[gender_id]":index+1] as [String:Int]
                 Alamofire.request(restrictionGenderURL, method: .post, parameters: restricGenderParams).responseJSON { response in
+                    print(response.response) // HTTP URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
@@ -64,6 +69,9 @@ class Restriction{
             if(ethnicityRestriction[index]){
                 let restricEthnicityParams: Parameters = ["restriction_ethnicity[restriction_id]":restrictionID, "restriction_ethnicity[ethnicity_id]":index+1] as [String:Int]
                 Alamofire.request(restrictionGenderURL, method: .post, parameters: restricEthnicityParams).responseJSON { response in
+                    print(response.response) // HTTP URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
