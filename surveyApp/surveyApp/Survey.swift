@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 
 class Survey {
@@ -22,7 +23,9 @@ class Survey {
     // gender list: [1: male, 2: female, 3: other]
     // ethnicity list: [1: hispanic or latino, 2: american indian or alaska native, 3: asian, 4: african american, 5: native hawaiian or pacific islander, 6: white]
     
-    func sendToAPI(){
+    func sendSurveyToAPI(completion: @escaping((_ id: Int) -> Void)){
+        var jsonResult: JSON = ""
+        var id: Int = 1
         let url = "https://ka-data.herokuapp.com/surveys"
         let params: Parameters = ["survey[name]":self.title, "survey[description]":self.description, "survey[est_time]": self.est_time, "survey[points]":self.points, "survey[url]":self.url] as [String : Any]
         Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
@@ -32,10 +35,14 @@ class Survey {
             print(response.data)     // server data
             print(response.result)   // result of response serialization
             
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
+            if let json = response.result.value {
+                jsonResult = JSON(json)
+                print("JSON: \(json)")
+                id = jsonResult["id"].int!
+                print("here is the survey id \(id)")
             }
         }
+        completion(id)
 
     }
     

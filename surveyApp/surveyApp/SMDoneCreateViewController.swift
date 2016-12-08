@@ -14,12 +14,11 @@ class SMDoneCreateViewController: UIViewController {
     var restriction: Restriction?
     var survey: Survey?
     
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var url: UITextField!
     
     override func viewDidLoad() {
-        print("done page")
-        print(restriction?.ethnicityRestriction)
         name.text = (survey?.title)!
         
         super.viewDidLoad()
@@ -31,7 +30,20 @@ class SMDoneCreateViewController: UIViewController {
 
     @IBAction func complete(){
         survey?.url = url.text!
-//        survey?.sendToAPI()
+        survey?.sendSurveyToAPI(){id in
+            self.restriction?.surveyID = id
+            self.restriction?.sendRestrictionsToAPI(){
+                print(self.restriction)
+            }
+
+        }
     }
 
 }
+
+//id in
+//self.restriction?.surveyID = id
+//self.restriction?.sendRestrictionsToAPI(){ id in
+//    print(self.restriction)
+//}
+

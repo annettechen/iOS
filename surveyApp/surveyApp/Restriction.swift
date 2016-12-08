@@ -8,66 +8,70 @@
 
 import Foundation
 import Alamofire
-import CoreLocation
+import SwiftyJSON
 
-class Restriction: NSObject{
+class Restriction{
     var surveyID = Int()
     var genderRestriction = [false, false, false]
     var ageRestriction = [Int(), Int()]
     var ethnicityRestriction = [false, false, false, false, false, false]
-    var longitude = CLLocationDegrees()
-    var latitude = CLLocationDegrees()
+    var longitude = Float()
+    var latitude = Float()
     var radius = Int()
     var numTakers = Int()
-    var locationManager = CLLocationManager()
+    var locationManager = Float()
     
-    func sendRestrictionsToAPI(){
+    func sendRestrictionsToAPI(completion: @escaping(() -> Void)){
+        var jsonResult: JSON = ""
+        var restrictionID: Int = 0
         let url = "https://ka-data.herokuapp.com/restrictions"
-        let params: Parameters = ["restriction[age_ub]": self.ageRestriction[0], "restriction[age_lb]":self.ageRestriction[1], "restriction[loc_center_long]": self.longitude, "restriction[loc_center_lat]":self.latitude, "restriction[loc_radius]": self.radius, "restriction[num_takers]":self.numTakers, "restriction[survey_id]":self.surveyID] as [String : Any]
+//        let headers: HTTPHeaders = ["Content-Type" : "application/json"]
+        let params: Parameters = ["restriction[age_ub]": self.ageRestriction[1], "restriction[age_lb]":self.ageRestriction[0], "restriction[loc_center_long]": self.longitude, "restriction[loc_center_lat]":self.latitude, "restriction[loc_radius]": self.radius, "restriction[num_takers]":self.numTakers, "restriction[survey_id]":self.surveyID] as [String : Any]
         Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
             print(response.request)  // original URL request
             print(response.response) // HTTP URL response
             print(response.data)     // server data
             print(response.result)   // result of response serialization
             
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
+            if let json = response.result.value {
+                jsonResult = JSON(json)
+                print("JSON: \(json)")
+                print(jsonResult["id"])
+                restrictionID = jsonResult["id"].int!
             }
         }
+        completion()
     }
     
-//    func genderRestrictions(restrictionID: Int){
-//        // create gender tables for all acceptable genders and create restriction_gender tables to connect
-//        let genderURL = "https://ka-data.herokuapp.com/genders"
-//        let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_genders"
-//        for gender in genderRestriction {
-//            let genderParams: Parameters = ["gender[name]":gender] as [String:Int]
-//            Alamofire.request(genderURL, method: .post, parameters: genderParams).responseJSON { response in
-//                if let JSON = response.result.value {
-//                    print("JSON: \(JSON)")
-//                }
-//            }
-//            let restricGenderParams: Parameters = ["restriction_gender[restriction_id]":restrictionID, "restriction_gender[gender_id]":gender] as [String:Int]
-//            Alamofire.request(restrictionGenderURL, method: .post, parameters: genderParams).responseJSON { response in
-//                if let JSON = response.result.value {
-//                    print("JSON: \(JSON)")
-//                }
-//            }
-//        }
-//    }
-    
-    func getCurrentLocation() {
-        locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-        
-        if let currLocation = locationManager.location {
-            self.latitude = currLocation.coordinate.latitude
-            self.longitude = currLocation.coordinate.longitude
+    func sendGenderRestrictions(restrictionID: Int){
+        let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_genders"
+        for index in 0..<genderRestriction.count {
+            if(genderRestriction[index]){
+                let restricGenderParams: Parameters = ["restriction_gender[restriction_id]":restrictionID, "restriction_gender[gender_id]":index+1] as [String:Int]
+                Alamofire.request(restrictionGenderURL, method: .post, parameters: restricGenderParams).responseJSON { response in
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+                }
+            }
+            
         }
     }
+    
+    func sendEthnicityRestrictions(restrictionID: Int){
+        let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_ethnicities"
+        for index in 0..<ethnicityRestriction.count {
+            if(ethnicityRestriction[index]){
+                let restricEthnicityParams: Parameters = ["restriction_ethnicity[restriction_id]":restrictionID, "restriction_ethnicity[ethnicity_id]":index+1] as [String:Int]
+                Alamofire.request(restrictionGenderURL, method: .post, parameters: restricEthnicityParams).responseJSON { response in
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+                }
+            }
+            
+        }
+    }
+    
 }
 
