@@ -58,7 +58,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     func populateLabels(){
         self.name.text = user.name
         self.demographics.text = "\(String(user.age)) years old, \(user.gender), \(user.ethnicity)"
-        self.point_total.text = String(user.points)
+        self.point_total.text = "\(String(user.points)) points"
     }
     
     @IBAction func toggleRecentSurveys() {
