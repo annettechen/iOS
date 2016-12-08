@@ -47,6 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //get the data for the table
         user.getSurveysUserCanTakeFromAPI(id: 2){ [unowned self] in
             DispatchQueue.main.async {
+                self.viewModel.filteredSurvs = user.takeableSurveys
                 self.tableView.reloadData()
             }
         }
@@ -92,6 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(viewModel.numberOfRows())
         return viewModel.numberOfRows()
 
     }
@@ -102,11 +104,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilteredSurveyCell", for: indexPath as IndexPath) as!FilteredSurveyCell
+        
+        print(indexPath.row)
+        print(viewModel.filteredSurvs[0].title)
+        cell.surveyTitle?.text = viewModel.filteredSurvs[indexPath[1]].title
+        cell.points?.text = "\(viewModel.filteredSurvs[indexPath[1]].points)"
+        cell.surveyDesc?.text = viewModel.filteredSurvs[indexPath[1]].description
+        cell.time?.text = "\(viewModel.filteredSurvs[indexPath[1]].est_time)"
 
-        cell.surveyTitle?.text = viewModel.titleForRowAtIndexPath(indexPath)
-        cell.points?.text = viewModel.pointsForRowAtIndexPath(indexPath)
-        cell.surveyDesc?.text = viewModel.descriptionForRowAtIndexPath(indexPath)
-        cell.time?.text = viewModel.estTimeForRowAtIndexPath(indexPath)
         return cell
     }
     
@@ -114,7 +119,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let surveyDetailVC = segue.destination as? SMTakerViewController,
             let indexPath = sender as? IndexPath {
-            surveyDetailVC.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+            print("MADE IT HERE")
+            let vm = SurveyDetailViewModel(survey: viewModel.filteredSurvs[indexPath[1]])
+            surveyDetailVC.viewModel = vm
         }
     }
     
