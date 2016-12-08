@@ -8,18 +8,52 @@
 
 import UIKit
 
-class ProfileSetupViewController: UIViewController {
+class ProfileSetupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var age: UITextField!
-    @IBOutlet weak var gender: UIPickerView!
-    @IBOutlet weak var ethnicity: UIPickerView!
+//    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var genderView: UIPickerView!
+    @IBOutlet weak var ethnicityView: UIPickerView!
+    
+    var genderDataSource = ["Male", "Female", "Other"];
+    
+    var ethnicityDataSource = ["Hispanic", "Native American", "Asian", "African American", "Pacific Islander", "White"];
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == genderView {
+            return genderDataSource.count
+        } else if pickerView == ethnicityView {
+            return ethnicityDataSource.count
+        }
+        return 0
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == genderView {
+            return genderDataSource[row]
+        } else if pickerView == ethnicityView {
+            return ethnicityDataSource[row]
+        }
+        return ""
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        genderView.delegate = self
+        genderView.dataSource = self
+        
+        ethnicityView.delegate = self
+        ethnicityView.dataSource = self
+        
+        
         
     }
 

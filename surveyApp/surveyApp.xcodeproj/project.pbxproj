@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		092198736FF95CA24083D90E /* Pods_surveyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62838600199FA1714338A31 /* Pods_surveyAppUITests.framework */; };
 		2202F5E31DF2BA02008A1648 /* Restriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2202F5E21DF2BA02008A1648 /* Restriction.swift */; };
-		222755651DF09E6B00B36590 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222755641DF09E6B00B36590 /* UserProfile.storyboard */; };
 		222755681DF09EAC00B36590 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222755671DF09EAC00B36590 /* UserProfileViewController.swift */; };
 		2230E1A01DF1F2120053C3F9 /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */; };
 		2230E1A61DF222C40053C3F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E1A51DF222C40053C3F9 /* User.swift */; };
@@ -64,7 +63,6 @@
 
 /* Begin PBXFileReference section */
 		2202F5E21DF2BA02008A1648 /* Restriction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restriction.swift; sourceTree = "<group>"; };
-		222755641DF09E6B00B36590 /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		222755671DF09EAC00B36590 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		2230E19F1DF1F2120053C3F9 /* SurveyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
 		2230E1A51DF222C40053C3F9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 		222755661DF09E7600B36590 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				222755641DF09E6B00B36590 /* UserProfile.storyboard */,
 				222755671DF09EAC00B36590 /* UserProfileViewController.swift */,
 				2249E00D1DF1088100866EF9 /* SurveyCell.swift */,
 				2249E00E1DF1088100866EF9 /* SurveyCell.xib */,
@@ -427,7 +424,6 @@
 				80EE2C271DF69BD800E1F10E /* Login.storyboard in Resources */,
 				2290EE801DF23D370079DCCD /* SurveyMonkey.storyboard in Resources */,
 				22FF40C41DD293DB0019C2C4 /* Main.storyboard in Resources */,
-				222755651DF09E6B00B36590 /* UserProfile.storyboard in Resources */,
 				2249E0101DF1088100866EF9 /* SurveyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

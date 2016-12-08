@@ -9,15 +9,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import FBSDKLoginKit
+
 
 
 class UserProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var point_total: UILabel!
-    @IBOutlet weak var age: UILabel!
-    @IBOutlet weak var gender: UILabel!
-    @IBOutlet weak var ethnicity: UILabel!
+    @IBOutlet weak var demographics: UILabel!
+    @IBOutlet weak var location: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,6 +41,9 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.register(cellNib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+        
+        recentSurveys.setTitleColor(UIColor.blue, for: .normal)
+        createdSurveys.setTitleColor(UIColor.black, for: .normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,43 +51,59 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func editProfile(){
-    }
-    
     func populateLabels(){
         self.name.text = self.user.name
+        self.demographics.text = "\(String(self.user.age)) years old, \(self.user.gender), \(self.user.ethnicity)"
         self.point_total.text = String(self.user.points)
-        self.age.text = String(self.user.age)
-        self.gender.text = self.user.gender
-        self.ethnicity.text = self.user.ethnicity
+    }
+    @IBAction func logOut() {
+        FBSDKLoginManager().logOut()
+
+    }
+    
+    @IBAction func toggleRecentSurveys() {
+        recentSurveysClicked = true
+        createdSurveysClicked = false
+        
+        recentSurveys.setTitleColor(UIColor.blue, for: .normal)
+        createdSurveys.setTitleColor(UIColor.black, for: .normal)
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func toggleCreatedSurveys() {
+        recentSurveysClicked = false
+        createdSurveysClicked = true
+        
+        recentSurveys.setTitleColor(UIColor.black, for: .normal)
+        createdSurveys.setTitleColor(UIColor.blue, for: .normal)
+        self.tableView.reloadData()
     }
 
-    @IBAction func toggleProfile() {
-        
-        recentSurveysClicked = !recentSurveysClicked
-        createdSurveysClicked = !createdSurveysClicked
     
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as!SurveyCell
-        if recentSurveysClicked {
-            user.getInfoFromAPI(id: 2){
+        if recentSurveysClicked == true {
+            print("recent survey clicked")
+            user.getInfoFromAPI(id: 1){
                 self.populateLabels()
-                cell.name?.text = self.user.surveys[indexPath[1]].title
-                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
+//                print("after populate labels")
+//                cell.name?.text = self.user.surveys[indexPath[1]].title
+//                cell.surveyDescription?.text = ""
+//                cell.points?.text = "+ \(self.user.surveys[indexPath[1]].points) points"
             }
         }
-        else {
-            user.getSurveysUserCreatedFromAPI(id: 2){
-                self.populateLabels()
-                cell.name?.text = self.user.createdSurveys[indexPath[1]].title
-                cell.points?.text = self.user.createdSurveys[indexPath[1]].title
-            }
-        }
+//        else {
+//            user.getSurveysUserCreatedFromAPI(id: 1){
+//                self.populateLabels()
+//                cell.name?.text = self.user.createdSurveys[indexPath[1]].title
+//                cell.surveyDescription?.text = self.user.createdSurveys[indexPath[1]].description
+//                cell.points?.text = ""
+//            }
+//        }
         return cell
     }
 }

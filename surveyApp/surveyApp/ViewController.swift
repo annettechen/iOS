@@ -123,7 +123,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
-        searchController.searchBar.barTintColor = UIColor(red:0.98, green:0.48, blue:0.24, alpha:1.0)
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {

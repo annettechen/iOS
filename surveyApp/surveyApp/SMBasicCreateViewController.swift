@@ -21,6 +21,8 @@ class SMBasicCreateViewController: UIViewController {
     @IBOutlet weak var points: UITextField!
     @IBOutlet var webView: UIWebView!
     
+    @IBOutlet var cancel: UIButton!
+    
     override func viewDidLoad() {
         print("basic controller segue test..")
         print(survey.title)
@@ -41,7 +43,6 @@ class SMBasicCreateViewController: UIViewController {
         survey.description = descrip.text!
         survey.est_time = Int(est_time.text!)!
         survey.points = Int(points.text!)!
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
