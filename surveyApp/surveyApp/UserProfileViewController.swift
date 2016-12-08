@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
+import FBSDKCoreKit
 
 
 
@@ -24,7 +25,10 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var recentSurveys: UIButton!
     @IBOutlet weak var createdSurveys: UIButton!
+    
 
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
+    
     var recentSurveysClicked = true
     var createdSurveysClicked = false
     
@@ -55,10 +59,6 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         self.name.text = user.name
         self.demographics.text = "\(String(user.age)) years old, \(user.gender), \(user.ethnicity)"
         self.point_total.text = String(user.points)
-    }
-    @IBAction func logOut() {
-        FBSDKLoginManager().logOut()
-
     }
     
     @IBAction func toggleRecentSurveys() {
@@ -91,7 +91,6 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
             user.getInfoFromAPI(id: 2){
                 self.populateLabels()
                 print("after populate labels")
-                print(user.surveys.count)
                 cell.name?.text = user.surveys[indexPath[1]].title
                 cell.surveyDescription?.text = ""
                 cell.points?.text = "+ \(user.surveys[indexPath[1]].points) points"
@@ -100,11 +99,18 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
 //        else {
 //            user.getSurveysUserCreatedFromAPI(id: 1){
 //                self.populateLabels()
-//                cell.name?.text = self.user.createdSurveys[indexPath[1]].title
-//                cell.surveyDescription?.text = self.user.createdSurveys[indexPath[1]].description
+//                cell.name?.text = user.createdSurveys[indexPath[1]].title
+//                cell.surveyDescription?.text = user.createdSurveys[indexPath[1]].description
 //                cell.points?.text = ""
 //            }
 //        }
         return cell
+    }
+    
+    
+    func logOut() {
+        let manager = FBSDKLoginManager()
+        manager.logOut()
+        print("logging out")
     }
 }

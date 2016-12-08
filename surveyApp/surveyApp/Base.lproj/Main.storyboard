@@ -31,6 +31,11 @@
                                 <items>
                                     <navigationItem title="Profile" id="8PK-6I-9LS">
                                         <barButtonItem key="leftBarButtonItem" id="W6X-E3-fPe"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="yNI-tv-ym6">
+                                            <connections>
+                                                <segue destination="7Fu-FJ-L29" kind="push" id="DBx-r4-pm1"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -125,15 +130,29 @@
                         <outlet property="createdSurveys" destination="ZzY-KM-7Ml" id="YcJ-Q9-qOV"/>
                         <outlet property="demographics" destination="xoX-Ow-1CE" id="UUd-w2-N1f"/>
                         <outlet property="location" destination="T5o-JA-GXe" id="TG7-cd-Q6q"/>
+                        <outlet property="logOutButton" destination="yNI-tv-ym6" id="XJV-UZ-Rm2"/>
                         <outlet property="name" destination="NWe-d2-uYp" id="Bzr-YS-hZu"/>
                         <outlet property="point_total" destination="aho-Sq-0m8" id="dnH-6l-pg6"/>
                         <outlet property="recentSurveys" destination="IOz-2s-x6G" id="fKo-HT-5wR"/>
                         <outlet property="tableView" destination="Y3H-Ph-CBd" id="61o-9Y-uHe"/>
+                        <segue destination="pcH-9b-zRU" kind="unwind" identifier="unwindToLoginViewController" unwindAction="prepareForUnwindWithSegue:" id="2EJ-sw-5Rf"/>
+                        <segue destination="pcH-9b-zRU" kind="unwind" unwindAction="prepareForUnwindWithSegue:" id="FXH-Lu-Brr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg0-yJ-Yg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pcH-9b-zRU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-279.5" y="1441.5"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="bHA-5W-B6w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="7Fu-FJ-L29" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QoW-Bl-vfW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXc-Gz-KHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="1135"/>
         </scene>
         <!--Home-->
         <scene sceneID="zAl-cj-a6Q">
@@ -204,7 +223,7 @@
         <scene sceneID="iXU-sM-YKv">
             <objects>
                 <navigationController id="soq-pO-Qir" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AQu-NZ-Hpl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQu-NZ-Hpl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
