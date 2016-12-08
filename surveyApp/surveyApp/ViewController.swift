@@ -48,6 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         user.getSurveysUserCanTakeFromAPI(id: 2){ [unowned self] in
             DispatchQueue.main.async {
                 self.viewModel.filteredSurvs = user.takeableSurveys
+                print(self.viewModel.filteredSurvs.count)
                 self.tableView.reloadData()
             }
         }
@@ -93,7 +94,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(viewModel.numberOfRows())
         return viewModel.numberOfRows()
 
     }
@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilteredSurveyCell", for: indexPath as IndexPath) as!FilteredSurveyCell
         
-        print(indexPath.row)
+        print("displaying info")
         print(viewModel.filteredSurvs[0].title)
         cell.surveyTitle?.text = viewModel.filteredSurvs[indexPath[1]].title
         cell.points?.text = "\(viewModel.filteredSurvs[indexPath[1]].points)"

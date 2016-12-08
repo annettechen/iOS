@@ -97,8 +97,13 @@ class User {
         var jsonResult:JSON = ""
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/takeableSurveys"
         Alamofire.request(url).responseJSON {response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
             if let json = response.result.value {
                 jsonResult = JSON(json)
+                print(jsonResult)
                 self.fillTakeableSurveyData(surveyJSON: jsonResult)
             }
             completion()
@@ -148,6 +153,7 @@ class User {
             new.points = surveyJSON[index]["points"].int!
             new.url = surveyJSON[index]["url"].string!
             self.takeableSurveys.append(new)
+            print(new.title)
         }
         print(takeableSurveys.count)
     }
