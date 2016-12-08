@@ -8,43 +8,57 @@
 
 import Foundation
 import Alamofire
-import MapKit
 
-class SMLocationCreateViewController: UIViewController {
-    @IBOutlet weak var mapView: MKMapView!
-    
+
+class SMLocationCreateViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+
+    @IBOutlet weak var radius: UITextField!
+    @IBOutlet weak var centerCity: UIPickerView!
     var restriction: Restriction?
     var survey: Survey?
     
+
+    var cityDataSource = [String]()
+    var city = ""
+    var Locations: [String: [Float]] = ["Boston":[42.3601, -71.0589], "San Francisco":[37.7749, -122.4194], "DC": [38.9072, 77.0369], "Pittsburgh":[40.4406, -79.9959]]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        restriction?.getCurrentLocation()
-        let initialLocation = CLLocation(latitude: (restriction?.latitude)!, longitude: (restriction?.longitude)!)
-        centerMapOnLocation(location: initialLocation)
-        let droppedPin = MKPointAnnotation()
-        droppedPin.coordinate = CLLocationCoordinate2D(latitude: (restriction?.latitude)!, longitude: (restriction?.longitude)!)
-        droppedPin.title = "You Are Here"
-        mapView.addAnnotation(droppedPin)
+        centerCity.dataSource = self;
+        centerCity.delegate = self;
+        for (key, _) in Locations{
+            cityDataSource.append(key)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    let regionRadius: CLLocationDistance = 10000
-
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        restriction?.latitude = (Locations[city]?[0])!
+        restriction?.longitude = (Locations[city]?[1])!
+        restriction?.radius = Int(radius.text!)!
         if segue.identifier == "toNumberCreate" {
             if let numberCreateVC = segue.destination as? SMNumberCreateViewController{
                 numberCreateVC.restriction = restriction!
                 numberCreateVC.survey = survey!
             }
         }
+    }
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return cityDataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        city = cityDataSource[row]
+        return cityDataSource[row]
     }
 
 }

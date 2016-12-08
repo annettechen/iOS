@@ -145,7 +145,7 @@ class User {
         
         for index in 0..<takeableSurveys.count {
             let s = takeableSurveys[index]
-            let sLoc = CLLocation(latitude: s.restriction.latitude, longitude: s.restriction.longitude)
+            let sLoc = CLLocation(latitude: CLLocationDegrees(s.restriction.latitude), longitude: CLLocationDegrees(s.restriction.longitude))
             if let dist = currLoc?.distance(from: sLoc){
                 if Int(dist) <= s.restriction.radius {
                     filteredSurveys.append(s)

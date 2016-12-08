@@ -11,6 +11,8 @@ import Alamofire
 
 class SMNumberCreateViewController: UIViewController {
     
+    @IBOutlet weak var num_takers: UITextField!
+    
     var restriction: Restriction?
     var survey: Survey?
     
@@ -23,7 +25,7 @@ class SMNumberCreateViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        restriction?.numTakers = 23
+        restriction?.numTakers = Int(num_takers.text!)!
         if segue.identifier == "toBasicCreate" {
             if let basicCreateVC = segue.destination as? SMBasicCreateViewController{
                 basicCreateVC.restriction = restriction!
