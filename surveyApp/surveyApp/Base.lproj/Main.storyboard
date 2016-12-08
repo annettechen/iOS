@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="eIf-e6-R2d">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="eIf-e6-R2d">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xdC-4F-6Ur"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="65c-c2-5wl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3mg-SP-2bO">
@@ -69,7 +69,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VSG-Ka-0kX" id="1RH-zh-r0h">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Survey Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgE-SM-2f1">
@@ -190,7 +190,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="M6V-Lw-Hhn" kind="push" identifier="toSurveyMonkeyToTake" id="72u-WE-IRJ"/>
+                                            <segue destination="eos-6n-f6A" kind="modal" identifier="toSurveyMonkeyToTake" id="0JN-Q8-itF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -211,6 +211,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Available Surveys" image="survey_bar_icon_selected" id="Yxf-CM-iYd"/>
+                    <navigationItem key="navigationItem" id="9uN-uO-k9E"/>
                     <connections>
                         <outlet property="tableView" destination="fJN-Wh-xWI" id="xFX-X4-GhS"/>
                     </connections>
@@ -220,55 +221,73 @@
             <point key="canvasLocation" x="-278.5" y="577.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="iXU-sM-YKv">
+        <scene sceneID="cTT-TT-Kwh">
             <objects>
-                <navigationController id="soq-pO-Qir" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQu-NZ-Hpl">
+                <navigationController id="aL8-3J-kHU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bEU-Qd-R11">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="M6V-Lw-Hhn" kind="push" id="5jA-64-mQq"/>
+                        <segue destination="eos-6n-f6A" kind="push" id="D5e-6d-nhR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zq0-fv-8Pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAV-AD-e9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="-292"/>
+            <point key="canvasLocation" x="-158" y="-190"/>
         </scene>
         <!--Taker View Controller-->
-        <scene sceneID="val-nQ-8W2">
+        <scene sceneID="X6H-Fc-nUk">
             <objects>
-                <viewController id="M6V-Lw-Hhn" customClass="SMTakerViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eos-6n-f6A" customClass="SMTakerViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cct-5p-8sv"/>
-                        <viewControllerLayoutGuide type="bottom" id="rl4-np-EJh"/>
+                        <viewControllerLayoutGuide type="top" id="fBV-NN-hEg"/>
+                        <viewControllerLayoutGuide type="bottom" id="FiW-rg-z6G"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zIb-xt-F1I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <view key="view" contentMode="scaleToFill" id="rH3-3q-9CB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uav-4O-lZO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biO-ko-b7W">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="X0K-4H-ski"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aT3-UI-9LB">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-ee-ULf">
+                                <rect key="frame" x="310" y="28" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="buttonPress" destination="eos-6n-f6A" eventType="touchUpInside" id="AQv-nI-mRE"/>
+                                    <segue destination="FAi-Lt-u21" kind="modal" id="P50-DL-P6j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="F8x-Y7-qMP">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="LUq-u0-5aH">
-                            <connections>
-                                <segue destination="FAi-Lt-u21" kind="push" identifier="'FinishedTakingSurvey'" id="gPD-F7-sK9"/>
-                            </connections>
+                    <navigationItem key="navigationItem" id="dlZ-QS-sML">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Iuh-bM-rhy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yf6-Xi-PlR">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="webView" destination="uav-4O-lZO" id="W1A-uL-VwH"/>
+                        <outlet property="webView" destination="aT3-UI-9LB" id="FkI-Z5-bVT"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PHf-dF-jCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUA-GL-wEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198.5" y="578.5"/>
+            <point key="canvasLocation" x="214.5" y="576.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tbs-PZ-uYZ">
@@ -279,7 +298,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ijS-zD-fHO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rnw-iG-xRd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFe-os-PVO">
@@ -379,7 +398,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="72u-WE-IRJ"/>
+        <segue reference="0JN-Q8-itF"/>
         <segue reference="w6y-b5-ckr"/>
     </inferredMetricsTieBreakers>
 </document>

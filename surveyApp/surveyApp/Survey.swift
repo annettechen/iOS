@@ -12,6 +12,7 @@ import SwiftyJSON
 
 
 class Survey {
+    var id = Int()
     var title = String()
     var description = String()
     var est_time = Int()
@@ -46,5 +47,5 @@ class Survey {
 
     }
     
-
+    
 }
