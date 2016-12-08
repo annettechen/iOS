@@ -11,6 +11,7 @@ import UIKit
 class SMTakerViewController: UIViewController {
 
     @IBOutlet var webView: UIWebView?
+    @IBOutlet var done: UIButton?
     
     var viewModel: SurveyDetailViewModel?
     
@@ -22,11 +23,24 @@ class SMTakerViewController: UIViewController {
         if let viewModel = viewModel,
             let urlString = viewModel.URLString(),
             let url = URL(string: urlString) {
+            print(urlString)
             let request = URLRequest(url: url)
             webView?.loadRequest(request)
         }
     }
 
+    @IBAction func buttonPress(){
+        
+        let surv = viewModel?.survey
+        let survUser = SurveyUser()
+        survUser.user_id = 2
+        survUser.relationship = 0
+        survUser.survey_id = (surv?.id)!
+        
+        survUser.sendSurveyUserToAPI(){
+            print("submitted surveyUser obj")
+        }
+    }
     /*
     // MARK: - Navigation
 

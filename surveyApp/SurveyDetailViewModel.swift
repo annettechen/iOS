@@ -16,6 +16,9 @@ class SurveyDetailViewModel {
         self.survey = survey
     }
     
+    func id() -> Int {
+        return survey.id
+    }
     func title() -> String {
         return survey.title
     }
