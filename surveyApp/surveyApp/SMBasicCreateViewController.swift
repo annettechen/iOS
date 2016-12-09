@@ -16,7 +16,7 @@ class SMBasicCreateViewController: UIViewController {
     var restriction = Restriction()
 
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var descrip: UITextView!
+    @IBOutlet weak var descrip: UITextField!
     @IBOutlet weak var est_time: UITextField!
     @IBOutlet weak var points: UITextField!
     @IBOutlet var webView: UIWebView!
