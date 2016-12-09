@@ -38,38 +38,45 @@ class Restriction{
                 print("JSON: \(json)")
                 print(jsonResult["id"])
                 restrictionID = jsonResult["id"].int!
+                self.sendGenderRestrictions(restrictionID: restrictionID)
+                self.sendEthnicityRestrictions(restrictionID: restrictionID)
             }
-        }
         completion()
+        }
     }
-    
     func sendGenderRestrictions(restrictionID: Int){
         let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_genders"
         for index in 0..<genderRestriction.count {
             if(genderRestriction[index]){
                 let restricGenderParams: Parameters = ["restriction_gender[restriction_id]":restrictionID, "restriction_gender[gender_id]":index+1] as [String:Int]
+                print(restricGenderParams)
                 Alamofire.request(restrictionGenderURL, method: .post, parameters: restricGenderParams).responseJSON { response in
+                    print(response.response) // HTTP URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
                 }
             }
-            
         }
     }
-    
+        
     func sendEthnicityRestrictions(restrictionID: Int){
         let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_ethnicities"
         for index in 0..<ethnicityRestriction.count {
             if(ethnicityRestriction[index]){
                 let restricEthnicityParams: Parameters = ["restriction_ethnicity[restriction_id]":restrictionID, "restriction_ethnicity[ethnicity_id]":index+1] as [String:Int]
+                print(restricEthnicityParams)
                 Alamofire.request(restrictionGenderURL, method: .post, parameters: restricEthnicityParams).responseJSON { response in
+                    print(response.response) // HTTP URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
                 }
             }
-            
         }
     }
     

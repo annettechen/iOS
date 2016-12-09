@@ -45,12 +45,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //get the data for the table
         user.getSurveysUserCanTakeFromAPI(id: 2){ [unowned self] in
+            print("getting surveys for table")
             DispatchQueue.main.async {
                 self.viewModel.filteredSurvs = user.takeableSurveys
                 self.tableView.reloadData()
             }
         }
         //user.filterTakeableSurveysByLocation()
+        tableView.reloadData()
 
     }
 
