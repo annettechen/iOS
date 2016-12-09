@@ -30,7 +30,7 @@ class SurveyTakenViewController: UIViewController {
     
     func setLabels() {
         
-        surveyNameLabel?.text! = survey.title
+        surveyNameLabel?.text! = "You've taken " + survey.title + "and earned"
         surveyPointsLabel?.text! = "\(survey.points)"
     
     }
