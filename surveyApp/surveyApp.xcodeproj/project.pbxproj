@@ -42,6 +42,7 @@
 		E32D3CA31DF8061A007BA459 /* SMTakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */; };
 		E32D3CA61DF808FD007BA459 /* SurveyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */; };
 		E36CEAE41DFA16B100C71369 /* SurveyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CEAE31DFA16B100C71369 /* SurveyUser.swift */; };
+		E36CEAE61DFA2B4900C71369 /* SurveyTakenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CEAE51DFA2B4900C71369 /* SurveyTakenViewController.swift */; };
 		E3FEE216BD1BE84CC179172D /* Pods_surveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95B18C55EF16327B630A291 /* Pods_surveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMTakerViewController.swift; path = surveyApp/SMTakerViewController.swift; sourceTree = "<group>"; };
 		E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailViewModel.swift; sourceTree = "<group>"; };
 		E36CEAE31DFA16B100C71369 /* SurveyUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyUser.swift; sourceTree = "<group>"; };
+		E36CEAE51DFA2B4900C71369 /* SurveyTakenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTakenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 			children = (
 				E32D3CA21DF8061A007BA459 /* SMTakerViewController.swift */,
 				E32D3CA51DF808FD007BA459 /* SurveyDetailViewModel.swift */,
+				E36CEAE51DFA2B4900C71369 /* SurveyTakenViewController.swift */,
 			);
 			name = Taker;
 			path = ..;
@@ -375,7 +378,7 @@
 				TargetAttributes = {
 					22FF40BA1DD293DB0019C2C4 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8Q6DRCY4SK;
+						DevelopmentTeam = 2PYC9H7KU5;
 						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -608,6 +611,7 @@
 				2230E1A81DF223310053C3F9 /* Survey.swift in Sources */,
 				22FF40BF1DD293DB0019C2C4 /* AppDelegate.swift in Sources */,
 				80EE2C211DF6928B00E1F10E /* LoginViewController.swift in Sources */,
+				E36CEAE61DFA2B4900C71369 /* SurveyTakenViewController.swift in Sources */,
 				E32D3CA31DF8061A007BA459 /* SMTakerViewController.swift in Sources */,
 				22F5A8C91DF35DD900DE04E1 /* SMNumberCreateViewController.swift in Sources */,
 				E36CEAE41DFA16B100C71369 /* SurveyUser.swift in Sources */,
@@ -761,11 +765,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
-				DEVELOPMENT_TEAM = 8Q6DRCY4SK;
+				DEVELOPMENT_TEAM = 2PYC9H7KU5;
 				INFOPLIST_FILE = surveyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "ka-app-bundle-identifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -778,11 +782,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
-				DEVELOPMENT_TEAM = 8Q6DRCY4SK;
+				DEVELOPMENT_TEAM = 2PYC9H7KU5;
 				INFOPLIST_FILE = surveyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cmuis.surveyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "ka-app-bundle-identifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

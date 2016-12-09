@@ -292,6 +292,9 @@
                                 <rect key="frame" x="365" y="20" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="buttonPress" destination="M6V-Lw-Hhn" eventType="touchUpInside" id="Yne-Mf-nIX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -299,7 +302,7 @@
                     <navigationItem key="navigationItem" id="F8x-Y7-qMP">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="LUq-u0-5aH">
                             <connections>
-                                <segue destination="FAi-Lt-u21" kind="modal" identifier="'FinishedTakingSurvey'" id="gPD-F7-sK9"/>
+                                <segue destination="FAi-Lt-u21" kind="modal" identifier="toFinishTakingSurvey" id="gPD-F7-sK9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -312,10 +315,10 @@
             </objects>
             <point key="canvasLocation" x="198" y="578"/>
         </scene>
-        <!--View Controller-->
+        <!--Survey Taken View Controller-->
         <scene sceneID="tbs-PZ-uYZ">
             <objects>
-                <viewController id="FAi-Lt-u21" sceneMemberID="viewController">
+                <viewController id="FAi-Lt-u21" customClass="SurveyTakenViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vk5-y8-2Ec"/>
                         <viewControllerLayoutGuide type="bottom" id="ijS-zD-fHO"/>
@@ -372,7 +375,7 @@
                                     <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jkq-ra-mv4" kind="push" id="w6y-b5-ckr"/>
+                                    <segue destination="jkq-ra-mv4" kind="push" identifier="BackToUserProfile" id="w6y-b5-ckr"/>
                                 </connections>
                             </button>
                         </subviews>
