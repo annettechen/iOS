@@ -38,12 +38,12 @@ class User {
         let url = "https://ka-data.herokuapp.com/users"
         Alamofire.request(url).responseJSON {response in
             if let json = response.result.value {
-                print(response.request)  // original URL request
-                print(response.response) // HTTP URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
+//                print(response.request)  // original URL request
+//                print(response.response) // HTTP URL response
+//                print(response.data)     // server data
+//                print(response.result)   // result of response serialization
                 jsonResult = JSON(json)
-                print(jsonResult.count)
+//                print(jsonResult.count)
                 
             }
             completion(jsonResult)
@@ -67,14 +67,14 @@ class User {
         let url = "https://ka-data.herokuapp.com/users/" + "\(id)" + "/info"
         
         Alamofire.request(url).responseJSON {response in
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
+//            print(response.request)  // original URL request
+//            print(response.response) // HTTP URL response
+//            print(response.data)     // server data
+//            print(response.result)   // result of response serialization
 
             if let json = response.result.value {
                 jsonResult = JSON(json)
-                print(jsonResult)
+//                print(jsonResult)
                 self.fillUserData(json: jsonResult)
             }
             completion()
@@ -88,10 +88,13 @@ class User {
         Alamofire.request(url).responseJSON {response in
             if let json = response.result.value {
                 jsonResult = JSON(json)
-                self.fillTakeableSurveyData(surveyJSON: jsonResult)
+                print(jsonResult)
+                self.fillCreatedSurveyData(surveyJSON: jsonResult)
             }
             completion()
         }
+        print("Finished Getting Created Surveys")
+        print(createdSurveys.count)
     }
     func getSurveysUserCanTakeFromAPI(id:Int, completion: @escaping (() -> Void)){
         var jsonResult:JSON = ""
@@ -127,13 +130,14 @@ class User {
     func fillCreatedSurveyData(surveyJSON: JSON){
         for index in 0..<surveyJSON.count{
             let new = Survey()
+            print(surveyJSON[index])
             new.title = surveyJSON[index]["name"].string!
             new.description = surveyJSON[index]["description"].string!
-            //            new.est_time = surveyJSON[index]["est_time"].int!
+            new.est_time = surveyJSON[index]["est_time"].int!
             new.points = surveyJSON[index]["points"].int!
             self.createdSurveys.append(new)
         }
-        print(takeableSurveys.count)
+        print(createdSurveys.count)
     }
 
     func fillTakeableSurveyData(surveyJSON: JSON){
@@ -141,18 +145,19 @@ class User {
             let new = Survey()
             new.title = surveyJSON[index]["name"].string!
             new.description = surveyJSON[index]["description"].string!
-            //            new.est_time = surveyJSON[index]["est_time"].int!
+            new.est_time = surveyJSON[index]["est_time"].int!
+            new.url = surveyJSON[index]["url"].string!
             new.points = surveyJSON[index]["points"].int!
             self.takeableSurveys.append(new)
         }
-        print(takeableSurveys.count)
     }
     func fillSurveyData(surveyJSON: JSON){
         for index in 0..<surveyJSON.count{
             let new = Survey()
             new.title = surveyJSON[index]["name"].string!
             new.description = surveyJSON[index]["description"].string!
-//            new.est_time = surveyJSON[index]["est_time"].int!
+            new.est_time = surveyJSON[index]["est_time"].int!
+            new.url = surveyJSON[index]["url"].string!
             new.points = surveyJSON[index]["points"].int!
             self.surveys.append(new)
         }

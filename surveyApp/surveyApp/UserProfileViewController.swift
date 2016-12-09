@@ -87,23 +87,23 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as!SurveyCell
         if recentSurveysClicked == true {
-            print("recent survey clicked")
             user.getInfoFromAPI(id: 2){
                 self.populateLabels()
-                print("after populate labels")
                 cell.name?.text = user.surveys[indexPath[1]].title
                 cell.surveyDescription?.text = ""
                 cell.points?.text = "+ \(user.surveys[indexPath[1]].points) points"
             }
         }
-//        else {
-//            user.getSurveysUserCreatedFromAPI(id: 1){
-//                self.populateLabels()
-//                cell.name?.text = user.createdSurveys[indexPath[1]].title
-//                cell.surveyDescription?.text = user.createdSurveys[indexPath[1]].description
-//                cell.points?.text = ""
-//            }
-//        }
+        else {
+            print("created surveys clicked")
+            user.getSurveysUserCreatedFromAPI(id: 2){
+                self.populateLabels()
+                cell.name?.text = user.createdSurveys[indexPath[1]].title
+                cell.surveyDescription?.text = user.createdSurveys[indexPath[1]].description
+                cell.points?.text = ""
+            }
+            print(user.createdSurveys.count)
+        }
         return cell
     }
     

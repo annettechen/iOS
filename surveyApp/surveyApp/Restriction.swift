@@ -26,7 +26,7 @@ class Restriction{
         var restrictionID: Int = 0
         let url = "https://ka-data.herokuapp.com/restrictions"
 //        let headers: HTTPHeaders = ["Content-Type" : "application/json"]
-        let params: Parameters = ["restriction[age_ub]": self.ageRestriction[1], "restriction[age_lb]":self.ageRestriction[0], "restriction[loc_center_long]": self.longitude, "restriction[loc_center_lat]":self.latitude, "restriction[loc_radius]": self.radius, "restriction[num_takers]":self.numTakers, "restriction[survey_id]":self.surveyID] as [String : Any]
+        let params: Parameters = ["restriction[age_ub]": self.ageRestriction[0], "restriction[age_lb]":self.ageRestriction[1], "restriction[loc_center_long]": self.longitude, "restriction[loc_center_lat]":self.latitude, "restriction[loc_radius]": self.radius, "restriction[num_takers]":self.numTakers, "restriction[survey_id]":self.surveyID] as [String : Any]
         Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
             print(response.request)  // original URL request
             print(response.response) // HTTP URL response
