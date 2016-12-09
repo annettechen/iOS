@@ -94,7 +94,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(viewModel.numberOfRows())
         return viewModel.numberOfRows()
 
     }
@@ -120,7 +119,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let surveyDetailVC = segue.destination as? SMTakerViewController,
             let indexPath = sender as? IndexPath {
-            print("MADE IT HERE")
             let vm = SurveyDetailViewModel(survey: viewModel.filteredSurvs[indexPath[1]])
             surveyDetailVC.viewModel = vm
         }
