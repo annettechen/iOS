@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xdC-4F-6Ur"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="65c-c2-5wl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mg-SP-2bO">
@@ -269,29 +269,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZJ-ta-0dI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="NAZ-h7-Fye"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.94509803920000002" green="0.59607843140000005" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Take Survey" id="CCI-zj-8n2">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="bxf-EM-rCg">
-                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <webView contentMode="scaleToFill" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uav-4O-lZO">
                                 <rect key="frame" x="0.0" y="49" width="414" height="687"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mf-BI-g53">
+                                <rect key="frame" x="353" y="11" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="buttonPress" destination="M6V-Lw-Hhn" eventType="touchUpInside" id="5sc-px-QeI"/>
+                                    <segue destination="FAi-Lt-u21" kind="modal" id="hO9-JS-EAa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -299,6 +288,8 @@
                             <constraint firstItem="uav-4O-lZO" firstAttribute="top" secondItem="cct-5p-8sv" secondAttribute="bottom" constant="24" id="QQg-hU-mEM"/>
                             <constraint firstAttribute="trailing" secondItem="uav-4O-lZO" secondAttribute="trailing" id="YiM-27-h7H"/>
                             <constraint firstItem="rl4-np-EJh" firstAttribute="top" secondItem="uav-4O-lZO" secondAttribute="bottom" id="tlg-Yl-Fsh"/>
+                            <constraint firstItem="1Mf-BI-g53" firstAttribute="top" secondItem="cct-5p-8sv" secondAttribute="bottom" constant="-9" id="uhi-gM-Tos"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Mf-BI-g53" secondAttribute="trailing" constant="4" id="wgE-lD-hrF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F8x-Y7-qMP">
@@ -334,8 +325,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You've taken surveyname and earned" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Faz-n7-rTX">
-                                <rect key="frame" x="20" y="312" width="374" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You've taken surveyname and earned" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Faz-n7-rTX">
+                                <rect key="frame" x="20" y="312" width="374" height="64"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -343,25 +334,29 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFe-os-PVO">
                                 <rect key="frame" x="58" y="607" width="298" height="40"/>
                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="Z1e-De-06i"/>
+                                    <constraint firstAttribute="height" constant="40" id="oUO-8Y-2k2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Back to Profile">
                                     <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jkq-ra-mv4" kind="push" identifier="BackToUserProfile" id="w6y-b5-ckr"/>
+                                    <segue destination="jkq-ra-mv4" kind="modal" identifier="BackToUserProfile" id="w6y-b5-ckr"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="congrats" translatesAutoresizingMaskIntoConstraints="NO" id="hpT-pc-Red">
+                                <rect key="frame" x="132" y="151" width="150" height="128"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKo-OA-Usy">
-                                <rect key="frame" x="105" y="358" width="206" height="38"/>
+                                <rect key="frame" x="105" y="400" width="206" height="38"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="congrats" translatesAutoresizingMaskIntoConstraints="NO" id="hpT-pc-Red">
-                                <rect key="frame" x="132" y="151" width="150" height="128"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="points!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLX-9T-VeD">
-                                <rect key="frame" x="105" y="404" width="206" height="38"/>
+                                <rect key="frame" x="105" y="446" width="206" height="38"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -386,6 +381,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CUx-w7-TIh"/>
+                    <connections>
+                        <outlet property="surveyPointsLabel" destination="LKo-OA-Usy" id="nr6-TL-xhX"/>
+                        <outlet property="takeBackToProfile" destination="IFe-os-PVO" id="Gbj-gw-L8y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fY-FI-hl5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -422,7 +421,8 @@
         <simulatedScreenMetrics key="destination" type="retina5_5.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5jA-64-mQq"/>
-        <segue reference="fkz-AL-WnE"/>
+        <segue reference="72u-WE-IRJ"/>
+        <segue reference="gPD-F7-sK9"/>
+        <segue reference="w6y-b5-ckr"/>
     </inferredMetricsTieBreakers>
 </document>
