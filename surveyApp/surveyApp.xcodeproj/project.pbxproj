@@ -767,7 +767,7 @@
 				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
 				DEVELOPMENT_TEAM = 2PYC9H7KU5;
 				INFOPLIST_FILE = surveyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ka-app-bundle-identifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -784,7 +784,7 @@
 				CODE_SIGN_ENTITLEMENTS = surveyApp/surveyApp.entitlements;
 				DEVELOPMENT_TEAM = 2PYC9H7KU5;
 				INFOPLIST_FILE = surveyApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ka-app-bundle-identifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
