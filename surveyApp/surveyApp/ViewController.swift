@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
- 
     let viewModel = SurveyViewModel()
     
     //for Search
@@ -108,9 +107,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("displaying info")
         print(viewModel.filteredSurvs[0].title)
         cell.surveyTitle?.text = viewModel.filteredSurvs[indexPath[1]].title
-        cell.points?.text = "\(viewModel.filteredSurvs[indexPath[1]].points)"
+        cell.points?.text = "\(viewModel.filteredSurvs[indexPath[1]].points)pts"
         cell.surveyDesc?.text = viewModel.filteredSurvs[indexPath[1]].description
-        cell.time?.text = "\(viewModel.filteredSurvs[indexPath[1]].est_time)"
+        cell.time?.text = "\(viewModel.filteredSurvs[indexPath[1]].est_time)min."
 
         return cell
     }

@@ -17,15 +17,24 @@ class SurveyUser {
     
     
     // relationship: [0: creator, 1: taker]
+<<<<<<< HEAD
 
     
     func sendSurveyUserToAPI(completion: @escaping(() -> Void)){
         print("does it come here??")
+=======
+    
+    
+    func sendSurveyUserToAPI(completion: @escaping(() -> Void)){
+>>>>>>> 4b3b1429124ad001a29d3f9bd3d5d0530fcc8929
         var jsonResult: JSON = ""
         var id: Int = 1
         let url = "https://ka-data.herokuapp.com/survey_users"
         let params: Parameters = ["survey_user[survey_id]":self.survey_id, "survey_user[user_id]":self.user_id, "survey_user[relationship]": self.relationship] as [String : Any]
+<<<<<<< HEAD
         print(params)
+=======
+>>>>>>> 4b3b1429124ad001a29d3f9bd3d5d0530fcc8929
         Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
             
             print(response.request)  // original URL request
@@ -43,5 +52,9 @@ class SurveyUser {
         completion()
         
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 4b3b1429124ad001a29d3f9bd3d5d0530fcc8929
 }

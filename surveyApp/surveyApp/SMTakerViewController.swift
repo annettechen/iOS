@@ -28,7 +28,20 @@ class SMTakerViewController: UIViewController {
             webView?.loadRequest(request)
         }
     }
+    
+    @IBAction func buttonPress(){
+        
+        let surv = viewModel?.survey
+        let survUser = SurveyUser()
+        survUser.user_id = user.id
+        survUser.relationship = 0
+        survUser.survey_id = (surv?.id)!
+        
+        survUser.sendSurveyUserToAPI(){
+            print("submitted surveyUser obj")
+        }
 
+<<<<<<< HEAD
     @IBAction func buttonPress(){
         
         let surv = viewModel?.survey
@@ -41,6 +54,20 @@ class SMTakerViewController: UIViewController {
             print("submitted surveyUser obj")
         }
     }
+=======
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFinishTakingSurvey" {
+            if let surveyTakenVC = segue.destination as? SurveyTakenViewController{
+                surveyTakenVC.survey = (viewModel?.survey)!
+            }
+        }
+    }
+    
+    
+    
+>>>>>>> 4b3b1429124ad001a29d3f9bd3d5d0530fcc8929
     /*
     // MARK: - Navigation
 

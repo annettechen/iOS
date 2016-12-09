@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MsR-6P-SLh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xUx-nM-DKK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,22 +10,32 @@
     </dependencies>
     <scenes>
         <!--LoginViewController-->
-        <scene sceneID="ciE-xK-PpO">
+        <scene sceneID="MxB-lM-ORK">
             <objects>
-                <viewController title="LoginViewController" id="MsR-6P-SLh" sceneMemberID="viewController">
+                <viewController title="LoginViewController" id="xUx-nM-DKK" customClass="LoginViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eMj-3n-CKp"/>
-                        <viewControllerLayoutGuide type="bottom" id="ebG-YK-b9t"/>
+                        <viewControllerLayoutGuide type="top" id="9I5-40-idC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vcu-kw-Uzc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="a5p-EC-lnk">
+                    <view key="view" contentMode="scaleToFill" id="Oh4-Ts-c6e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login-screen" translatesAutoresizingMaskIntoConstraints="NO" id="tVN-LX-dMW">
+                                <rect key="frame" x="-26" y="0.0" width="426" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="n7b-RN-byH"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lJf-i8-eDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxb-mg-q9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569" y="206"/>
+            <point key="canvasLocation" x="48.799999999999997" y="62.518740629685162"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login-screen" width="404" height="485"/>
+    </resources>
 </document>
