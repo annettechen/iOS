@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="eIf-e6-R2d">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="eIf-e6-R2d">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,9 +37,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWe-d2-uYp">
-                                <rect key="frame" x="20" y="75" width="375" height="47"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWe-d2-uYp">
+                                <rect key="frame" x="134" y="97" width="385" height="80"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VSG-Ka-0kX" id="1RH-zh-r0h">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Survey Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgE-SM-2f1">
@@ -96,20 +96,21 @@
                                     <action selector="toggleCreatedSurveys" destination="jkq-ra-mv4" eventType="touchUpInside" id="v6c-PT-sDB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5o-JA-GXe">
-                                <rect key="frame" x="97" y="188" width="221" height="21"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoX-Ow-1CE">
-                                <rect key="frame" x="19" y="159" width="375" height="21"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sally" translatesAutoresizingMaskIntoConstraints="NO" id="pSo-Zk-SwZ">
+                                <rect key="frame" x="36" y="97" width="82" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="R0i-yR-Twn"/>
+                                    <constraint firstAttribute="height" constant="80" id="l9T-5M-fxK"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(points)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aho-Sq-0m8">
-                                <rect key="frame" x="178" y="130" width="59" height="21"/>
+                                <rect key="frame" x="134" y="183" width="59" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoX-Ow-1CE">
+                                <rect key="frame" x="134" y="212" width="260" height="51"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -119,20 +120,23 @@
                         <constraints>
                             <constraint firstItem="IOz-2s-x6G" firstAttribute="leading" secondItem="65c-c2-5wl" secondAttribute="leadingMargin" constant="34" id="0gr-yB-ZPQ"/>
                             <constraint firstItem="aho-Sq-0m8" firstAttribute="centerX" secondItem="65c-c2-5wl" secondAttribute="centerX" id="1PH-Pq-c3H"/>
-                            <constraint firstItem="IOz-2s-x6G" firstAttribute="top" secondItem="T5o-JA-GXe" secondAttribute="bottom" constant="70" id="G3J-xO-8qP"/>
+                            <constraint firstItem="aho-Sq-0m8" firstAttribute="leading" secondItem="xoX-Ow-1CE" secondAttribute="leading" id="1de-7n-S8L"/>
                             <constraint firstItem="xoX-Ow-1CE" firstAttribute="centerX" secondItem="65c-c2-5wl" secondAttribute="centerX" id="JEe-bD-BPL"/>
                             <constraint firstItem="3mg-SP-2bO" firstAttribute="top" secondItem="65c-c2-5wl" secondAttribute="top" id="Nkw-lT-5aj"/>
+                            <constraint firstItem="IOz-2s-x6G" firstAttribute="top" secondItem="xoX-Ow-1CE" secondAttribute="bottom" constant="16" id="P1s-ja-6mO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZzY-KM-7Ml" secondAttribute="trailing" constant="34" id="P9g-Nz-nr8"/>
+                            <constraint firstItem="pSo-Zk-SwZ" firstAttribute="leading" secondItem="65c-c2-5wl" secondAttribute="leadingMargin" constant="16" id="QT7-vq-bqU"/>
                             <constraint firstItem="IOz-2s-x6G" firstAttribute="width" secondItem="ZzY-KM-7Ml" secondAttribute="width" id="Rkj-1p-UxE"/>
                             <constraint firstAttribute="trailing" secondItem="3mg-SP-2bO" secondAttribute="trailing" id="TJI-q0-M5K"/>
                             <constraint firstItem="3mg-SP-2bO" firstAttribute="leading" secondItem="65c-c2-5wl" secondAttribute="leading" id="UjJ-qF-h5h"/>
                             <constraint firstItem="xoX-Ow-1CE" firstAttribute="top" secondItem="aho-Sq-0m8" secondAttribute="bottom" constant="8" id="X1N-TF-wk1"/>
+                            <constraint firstItem="ZzY-KM-7Ml" firstAttribute="top" secondItem="xoX-Ow-1CE" secondAttribute="bottom" constant="16" id="ahG-Kq-r7r"/>
+                            <constraint firstItem="NWe-d2-uYp" firstAttribute="leading" secondItem="aho-Sq-0m8" secondAttribute="leading" id="cGT-5h-kOF"/>
                             <constraint firstItem="NWe-d2-uYp" firstAttribute="top" secondItem="3mg-SP-2bO" secondAttribute="bottom" constant="31" id="eSJ-At-peZ"/>
-                            <constraint firstItem="T5o-JA-GXe" firstAttribute="centerX" secondItem="65c-c2-5wl" secondAttribute="centerX" id="gZS-qY-Nk7"/>
                             <constraint firstItem="aho-Sq-0m8" firstAttribute="top" secondItem="NWe-d2-uYp" secondAttribute="bottom" constant="8" id="kPQ-qR-OWE"/>
                             <constraint firstAttribute="trailing" secondItem="3mg-SP-2bO" secondAttribute="trailing" id="pcR-IF-fWc"/>
-                            <constraint firstItem="T5o-JA-GXe" firstAttribute="top" secondItem="xoX-Ow-1CE" secondAttribute="bottom" constant="8" id="psw-Fe-h9A"/>
-                            <constraint firstItem="ZzY-KM-7Ml" firstAttribute="top" secondItem="T5o-JA-GXe" secondAttribute="bottom" constant="70" id="wHq-OA-ii0"/>
+                            <constraint firstItem="NWe-d2-uYp" firstAttribute="leading" secondItem="pSo-Zk-SwZ" secondAttribute="trailing" constant="16" id="uTQ-me-txm"/>
+                            <constraint firstItem="pSo-Zk-SwZ" firstAttribute="top" secondItem="3mg-SP-2bO" secondAttribute="bottom" constant="37" id="xZn-fm-Nb3"/>
                             <constraint firstItem="NWe-d2-uYp" firstAttribute="centerX" secondItem="65c-c2-5wl" secondAttribute="centerX" id="yYG-YS-39p"/>
                             <constraint firstItem="3mg-SP-2bO" firstAttribute="leading" secondItem="65c-c2-5wl" secondAttribute="leading" id="ytc-bL-pPk"/>
                             <constraint firstItem="ZzY-KM-7Ml" firstAttribute="leading" secondItem="IOz-2s-x6G" secondAttribute="trailing" constant="93" id="yuc-vA-rWW"/>
@@ -144,7 +148,6 @@
                     <connections>
                         <outlet property="createdSurveys" destination="ZzY-KM-7Ml" id="YcJ-Q9-qOV"/>
                         <outlet property="demographics" destination="xoX-Ow-1CE" id="UUd-w2-N1f"/>
-                        <outlet property="location" destination="T5o-JA-GXe" id="TG7-cd-Q6q"/>
                         <outlet property="name" destination="NWe-d2-uYp" id="Bzr-YS-hZu"/>
                         <outlet property="point_total" destination="aho-Sq-0m8" id="dnH-6l-pg6"/>
                         <outlet property="recentSurveys" destination="IOz-2s-x6G" id="fKo-HT-5wR"/>
@@ -193,7 +196,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wzZ-5W-Z4b" id="8q5-3Z-pbL">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -413,6 +416,7 @@
     <resources>
         <image name="congrats" width="195" height="178"/>
         <image name="profile_icon" width="24" height="29"/>
+        <image name="sally" width="127" height="127"/>
         <image name="survey_bar_icon_selected" width="26" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
