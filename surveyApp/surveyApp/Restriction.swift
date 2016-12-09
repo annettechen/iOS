@@ -25,7 +25,6 @@ class Restriction{
         var jsonResult: JSON = ""
         var restrictionID: Int = 0
         let url = "https://ka-data.herokuapp.com/restrictions"
-//        let headers: HTTPHeaders = ["Content-Type" : "application/json"]
         let params: Parameters = ["restriction[age_ub]": self.ageRestriction[1], "restriction[age_lb]":self.ageRestriction[0], "restriction[loc_center_long]": self.longitude, "restriction[loc_center_lat]":self.latitude, "restriction[loc_radius]": self.radius, "restriction[num_takers]":self.numTakers, "restriction[survey_id]":self.surveyID] as [String : Any]
         Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
             print(response.request)  // original URL request
@@ -50,6 +49,7 @@ class Restriction{
         for index in 0..<genderRestriction.count {
             if(genderRestriction[index]){
                 let restricGenderParams: Parameters = ["restriction_gender[restriction_id]":restrictionID, "restriction_gender[gender_id]":index+1] as [String:Int]
+                print(restricGenderParams)
                 Alamofire.request(restrictionGenderURL, method: .post, parameters: restricGenderParams).responseJSON { response in
                     print(response.response) // HTTP URL response
                     print(response.data)     // server data
@@ -68,6 +68,7 @@ class Restriction{
         for index in 0..<ethnicityRestriction.count {
             if(ethnicityRestriction[index]){
                 let restricEthnicityParams: Parameters = ["restriction_ethnicity[restriction_id]":restrictionID, "restriction_ethnicity[ethnicity_id]":index+1] as [String:Int]
+                print(restricEthnicityParams)
                 Alamofire.request(restrictionGenderURL, method: .post, parameters: restricEthnicityParams).responseJSON { response in
                     print(response.response) // HTTP URL response
                     print(response.data)     // server data

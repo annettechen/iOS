@@ -13,7 +13,7 @@ class SMDoneCreateViewController: UIViewController {
     
     var restriction: Restriction?
     var survey: Survey?
-//    var surveyUser: SurveyUser?
+    var surveyUser = SurveyUser()
     
     
     @IBOutlet weak var name: UILabel!
@@ -30,19 +30,19 @@ class SMDoneCreateViewController: UIViewController {
     }
 
     @IBAction func complete(){
-//        surveyUser?.survey_id = (survey?.id)!
-//        surveyUser?.user_id = 2
-//        surveyUser?.relationship = 0
-//        surveyUser?.sendSurveyUserToAPI {
-//            print(self.surveyUser?.survey_id)
-//        }
+        print("trying to complete....")
         survey?.url = url.text!
         survey?.sendSurveyToAPI(){id in
             self.restriction?.surveyID = id
             self.restriction?.sendRestrictionsToAPI(){
 //                print(self.restriction)
             }
-
+            self.surveyUser.survey_id = (self.survey?.id)!
+            self.surveyUser.user_id = 2
+            self.surveyUser.relationship = 0
+            self.surveyUser.sendSurveyUserToAPI(){
+                print(self.surveyUser.survey_id)
+            }
         }
     }
 

@@ -20,10 +20,12 @@ class SurveyUser {
 
     
     func sendSurveyUserToAPI(completion: @escaping(() -> Void)){
+        print("does it come here??")
         var jsonResult: JSON = ""
         var id: Int = 1
         let url = "https://ka-data.herokuapp.com/survey_users"
         let params: Parameters = ["survey_user[survey_id]":self.survey_id, "survey_user[user_id]":self.user_id, "survey_user[relationship]": self.relationship] as [String : Any]
+        print(params)
         Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
             
             print(response.request)  // original URL request
