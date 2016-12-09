@@ -32,7 +32,7 @@ class SMTakerViewController: UIViewController {
         
         let surv = viewModel?.survey
         let survUser = SurveyUser()
-        survUser.user_id = 2
+        survUser.user_id = user.id
         survUser.relationship = 0
         survUser.survey_id = (surv?.id)!
         
@@ -41,6 +41,17 @@ class SMTakerViewController: UIViewController {
         }
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFinishTakingSurvey" {
+            if let surveyTakenVC = segue.destination as? SurveyTakenViewController{
+                surveyTakenVC.survey = (viewModel?.survey)!
+            }
+        }
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

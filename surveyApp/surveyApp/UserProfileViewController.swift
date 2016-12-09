@@ -32,7 +32,6 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     var recentSurveysClicked = true
     var createdSurveysClicked = false
     
-//    var user = User()
     var json:JSON = ""
 
 
@@ -48,6 +47,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         
         recentSurveys.setTitleColor(UIColor.blue, for: .normal)
         createdSurveys.setTitleColor(UIColor.black, for: .normal)
+        self.populateLabels()
     }
     
     override func didReceiveMemoryWarning() {
