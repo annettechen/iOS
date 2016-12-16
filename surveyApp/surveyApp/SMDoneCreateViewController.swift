@@ -32,7 +32,7 @@ class SMDoneCreateViewController: UIViewController {
         print("trying to complete....")
         survey?.url = url.text!
         survey?.sendSurveyToAPI(){id in
-            print("this is udududududududud \(id)")
+            print("this is \(id)")
 
             self.restriction?.surveyID = id
             self.restriction?.sendRestrictionsToAPI(){
@@ -49,7 +49,7 @@ class SMDoneCreateViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         // Create an instance of the storyboard's initial view controller.
-        let controller = storyboard.instantiateViewController(withIdentifier: "UserProfileViewController") as UIViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as UIViewController
         
         // Display the new view controller.
         present(controller, animated: true, completion: nil)

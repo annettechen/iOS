@@ -130,7 +130,9 @@ class User {
     func fillCreatedSurveyData(surveyJSON: JSON){
         for index in 0..<surveyJSON.count{
             let new = Survey()
-            print(surveyJSON[index])
+            print("here is the survey json \(surveyJSON)")
+            
+            
             new.title = surveyJSON[index]["name"].string!
             new.description = surveyJSON[index]["description"].string!
             new.est_time = surveyJSON[index]["est_time"].int!
