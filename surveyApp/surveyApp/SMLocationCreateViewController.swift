@@ -10,10 +10,11 @@ import Foundation
 import Alamofire
 
 
-class SMLocationCreateViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class SMLocationCreateViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var radius: UITextField!
     @IBOutlet weak var centerCity: UIPickerView!
+    @IBOutlet weak var nextButton: UIButton!
     var restriction: Restriction?
     var survey: Survey?
     
@@ -31,10 +32,20 @@ class SMLocationCreateViewController: UIViewController, UIPickerViewDataSource, 
         for (key, _) in Locations{
             cityDataSource.append(key)
         }
+        initializeTextFields()
+        self.hideKeyboardWhenTappedAround()
+        nextButton.isEnabled = false
+        nextButton.alpha = 0.25
+        radius.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func initializeTextFields() {
+        radius.delegate = self
+        radius.keyboardType = UIKeyboardType.numberPad
     }
     
     //MARK: Navigation between views
@@ -48,6 +59,16 @@ class SMLocationCreateViewController: UIViewController, UIPickerViewDataSource, 
                 numberCreateVC.survey = survey!
             }
         }
+    }
+    
+    func checkFields(sender: UITextField) {
+        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
+        guard
+            let radius = radius.text, !radius.isEmpty
+            else { return }
+        // enable your button if all conditions are met
+        nextButton.isEnabled = true
+        nextButton.alpha = 1.0
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
