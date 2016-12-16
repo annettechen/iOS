@@ -147,6 +147,7 @@ class User {
     }
 
     func fillTakeableSurveyData(surveyJSON: JSON){
+        self.takeableSurveys = []
         for index in 0..<surveyJSON.count{
             let new = Survey()
             new.title = surveyJSON[index]["name"].string!
