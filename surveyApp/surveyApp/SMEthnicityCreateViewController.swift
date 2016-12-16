@@ -84,6 +84,7 @@ class SMEthnicityCreateViewController: UIViewController {
         
     }
     
+    //MARK: Navigation between views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("pps ethnicity...")
         print(restriction?.ethnicityRestriction)

@@ -30,9 +30,11 @@ class User {
     var locationManager = CLLocationManager()
     
     
+    //Gender and Ethnicity Arrays
     let genders = ["Male", "Female", "Other"]
     let ethnicities = ["Hispanic or Latino","American Indian or Alaskan Native","Asian","African American","Native Hawaiian or Other Pacific Islander","White"]
     
+    //MARK: User Parsing Methods
     func getAllUsers(completion: @escaping ((_ json: JSON) -> Void)){
         var jsonResult: JSON = ""
         let url = "https://ka-data.herokuapp.com/users"
@@ -109,6 +111,7 @@ class User {
     }
     
     
+    //MARK: Filling User Data
     func fillUserData(json: JSON){
         self.id = json["demographics"]["id"].int!
         self.name = json["demographics"]["name"].string!

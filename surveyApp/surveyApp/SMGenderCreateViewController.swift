@@ -19,6 +19,8 @@ class SMGenderCreateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //basic setup
         male.setTitleColor(UIColor.gray, for: .normal)
         female.setTitleColor(UIColor.gray, for: .normal)
         other.setTitleColor(UIColor.gray, for: .normal)
@@ -29,6 +31,7 @@ class SMGenderCreateViewController: UIViewController {
         super.viewWillAppear(animated)
     }
 
+    //MARK: Button Selection
     @IBAction func maleTapped(sender: AnyObject){
         toggleButton(button: male, index: 0)
     }
@@ -51,6 +54,7 @@ class SMGenderCreateViewController: UIViewController {
         }
     }
     
+    //MARK: Navigation between views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAgeCreate" {
             if let ageCreateVC = segue.destination as? SMAgeCreateViewController{

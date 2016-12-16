@@ -31,9 +31,10 @@ class SMDoneCreateViewController: UIViewController {
     @IBAction func complete(){
         print("trying to complete....")
         survey?.url = url.text!
+        
+    //MARK: Save Created Survey
         survey?.sendSurveyToAPI(){id in
             print("this is \(id)")
-
             self.restriction?.surveyID = id
             self.restriction?.sendRestrictionsToAPI(){
                 //                print(self.restriction)
@@ -57,10 +58,4 @@ class SMDoneCreateViewController: UIViewController {
     }
 
 }
-
-//id in
-//self.restriction?.surveyID = id
-//self.restriction?.sendRestrictionsToAPI(){ id in
-//    print(self.restriction)
-//}
 

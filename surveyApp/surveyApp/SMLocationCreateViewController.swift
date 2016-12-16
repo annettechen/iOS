@@ -17,7 +17,8 @@ class SMLocationCreateViewController: UIViewController, UIPickerViewDataSource, 
     var restriction: Restriction?
     var survey: Survey?
     
-
+    
+    //MARK: Pre-Set Location Centers
     var cityDataSource = [String]()
     var city = ""
     var Locations: [String: [Float]] = ["Boston":[42.3601, -71.0589], "San Francisco":[37.7749, -122.4194], "DC": [38.9072, 77.0369], "Pittsburgh":[40.4406, -79.9959]]
@@ -36,6 +37,7 @@ class SMLocationCreateViewController: UIViewController, UIPickerViewDataSource, 
         super.viewWillAppear(animated)
     }
     
+    //MARK: Navigation between views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         restriction?.latitude = (Locations[city]?[0])!
         restriction?.longitude = (Locations[city]?[1])!

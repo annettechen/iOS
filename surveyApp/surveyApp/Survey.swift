@@ -21,9 +21,11 @@ class Survey {
     var restriction = Restriction()
 
     
+    // MARK: NOTES
     // gender list: [1: male, 2: female, 3: other]
     // ethnicity list: [1: hispanic or latino, 2: american indian or alaska native, 3: asian, 4: african american, 5: native hawaiian or pacific islander, 6: white]
     
+    //MARK: Post a Survey
     func sendSurveyToAPI(completion: @escaping((_ id: Int) -> Void)){
         var jsonResult: JSON = ""
         let url = "https://ka-data.herokuapp.com/surveys"

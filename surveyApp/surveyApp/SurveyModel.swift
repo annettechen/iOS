@@ -16,6 +16,7 @@ class SurveyViewModel {
     var filteredSurvs = [Survey]()
     
 
+    // Returns number of rows
     func numberOfRows() -> Int {
         if filteredSurvs.isEmpty {
             return survs.count
@@ -24,6 +25,7 @@ class SurveyViewModel {
         }
     }
     
+    // Return title for survey
     func titleForRowAtIndexPath(_ indexPath: IndexPath) -> String {
         guard indexPath.row >= 0 && indexPath.row < survs.count else {
             return ""
@@ -35,6 +37,7 @@ class SurveyViewModel {
         }
     }
     
+    // Return points for survey
     func pointsForRowAtIndexPath(_ indexPath: IndexPath) -> String {
         guard indexPath.row >= 0 && indexPath.row < survs.count else {
             return ""
@@ -46,6 +49,7 @@ class SurveyViewModel {
         }
     }
     
+    // Return estimated time for survey
     func estTimeForRowAtIndexPath(_ indexPath: IndexPath) -> String {
         guard indexPath.row >= 0 && indexPath.row < survs.count else {
             return ""
@@ -57,6 +61,7 @@ class SurveyViewModel {
         }
     }
     
+    //Return description for survey
     func descriptionForRowAtIndexPath(_ indexPath: IndexPath) -> String {
         guard indexPath.row >= 0 && indexPath.row < survs.count else {
             return ""
@@ -68,11 +73,13 @@ class SurveyViewModel {
         }
     }
     
+    //Return SurveyDetail Object for a given survey
     func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> SurveyDetailViewModel {
         let surv = (filteredSurvs.isEmpty ? survs[indexPath.row] : filteredSurvs[indexPath.row])
         return SurveyDetailViewModel(survey: surv)
     }
     
+    //Runs a search query
     func updateFiltering(_ searchText: String) -> Void {
         filteredSurvs = self.survs.filter { surv in
             return surv.title.lowercased().contains(searchText.lowercased())

@@ -21,6 +21,9 @@ class Restriction{
     var numTakers = Int()
     var locationManager = Float()
     
+    
+    
+    //MARK: Post Restrictions
     func sendRestrictionsToAPI(completion: @escaping(() -> Void)){
         var jsonResult: JSON = ""
         var restrictionID: Int = 0
@@ -44,6 +47,9 @@ class Restriction{
         completion()
         }
     }
+    
+    
+    // MARK: Send Dependant Restrictions
     func sendGenderRestrictions(restrictionID: Int){
         let restrictionGenderURL = "https://ka-data.herokuapp.com/restriction_genders"
         for index in 0..<genderRestriction.count {

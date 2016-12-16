@@ -28,6 +28,7 @@ class SMTakerViewController: UIViewController {
         }
     }
     
+    // MARK: When Survey is Completed ...
     @IBAction func buttonPress(){
         
         let surv = viewModel?.survey
@@ -43,6 +44,7 @@ class SMTakerViewController: UIViewController {
 
     }
     
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toFinishTakingSurvey" {
             if let surveyTakenVC = segue.destination as? SurveyTakenViewController{

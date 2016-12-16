@@ -63,6 +63,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    //MARK: Button Interaction
+    
     @IBAction func userProfileAction(sender: AnyObject) {
         // Create a new "Storyboard2" instance.
         let storyboard = UIStoryboard(name: "UserProfile", bundle: nil)
@@ -73,7 +75,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Display the new view controller.
         present(controller, animated: true, completion: nil)
     }
-    
     
     @IBAction func makeASurvey(sender: AnyObject){
         // Create a new Storyboard instance.

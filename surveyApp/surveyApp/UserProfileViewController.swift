@@ -61,6 +61,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
         self.point_total.text = "\(String(user.points)) points"
     }
     
+    //MARK: Button Presses
     @IBAction func toggleRecentSurveys() {
         recentSurveysClicked = true
         createdSurveysClicked = false
@@ -80,6 +81,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     
+    //MARK: Available Surveys Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -108,6 +110,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    //MARK: Log Out
     @IBAction func logOut() {
         let manager = FBSDKLoginManager()
         manager.logOut()

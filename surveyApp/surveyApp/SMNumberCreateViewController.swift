@@ -24,6 +24,7 @@ class SMNumberCreateViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    //MARK: Navigation between views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         restriction?.numTakers = Int(num_takers.text!)!
         if segue.identifier == "toBasicCreate" {
