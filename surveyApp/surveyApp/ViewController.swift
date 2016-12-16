@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
         //user.filterTakeableSurveysByLocation()
-        tableView.reloadData()
+//        tableView.reloadData()
 
     }
 
