@@ -29,7 +29,7 @@
 		22FF40C41DD293DB0019C2C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF40C21DD293DB0019C2C4 /* Main.storyboard */; };
 		22FF40C61DD293DB0019C2C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22FF40C51DD293DB0019C2C4 /* Assets.xcassets */; };
 		22FF40C91DD293DB0019C2C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF40C71DD293DB0019C2C4 /* LaunchScreen.storyboard */; };
-		22FF40D41DD293DC0019C2C4 /* surveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40D31DD293DC0019C2C4 /* surveyAppTests.swift */; };
+		22FF40D41DD293DC0019C2C4 /* surveyModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40D31DD293DC0019C2C4 /* surveyModelTests.swift */; };
 		22FF40DF1DD293DC0019C2C4 /* surveyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF40DE1DD293DC0019C2C4 /* surveyAppUITests.swift */; };
 		73CBC3F9F8D05723A1ED74DB /* Pods_surveyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627555E21C9FB9E85AF2D772 /* Pods_surveyAppTests.framework */; };
 		801A00C01DF787E500DAFDEA /* FilteredSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801A00BE1DF787E500DAFDEA /* FilteredSurveyCell.swift */; };
@@ -89,7 +89,7 @@
 		22FF40C81DD293DB0019C2C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22FF40CA1DD293DB0019C2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FF40CF1DD293DC0019C2C4 /* surveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = surveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22FF40D31DD293DC0019C2C4 /* surveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyAppTests.swift; sourceTree = "<group>"; };
+		22FF40D31DD293DC0019C2C4 /* surveyModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyModelTests.swift; sourceTree = "<group>"; };
 		22FF40D51DD293DC0019C2C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FF40DA1DD293DC0019C2C4 /* surveyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = surveyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF40DE1DD293DC0019C2C4 /* surveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = surveyAppUITests.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		22FF40D21DD293DC0019C2C4 /* surveyAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				22FF40D31DD293DC0019C2C4 /* surveyAppTests.swift */,
+				22FF40D31DD293DC0019C2C4 /* surveyModelTests.swift */,
 				22FF40D51DD293DC0019C2C4 /* Info.plist */,
 			);
 			path = surveyAppTests;
@@ -624,7 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22FF40D41DD293DC0019C2C4 /* surveyAppTests.swift in Sources */,
+				22FF40D41DD293DC0019C2C4 /* surveyModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
