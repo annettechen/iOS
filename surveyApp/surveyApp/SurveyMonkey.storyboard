@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EZn-IY-X0t">
-=======
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EZn-IY-X0t">
->>>>>>> 954b0595fc334466c41b94a7a6fb245af7f55f21
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +14,7 @@
         <scene sceneID="6OC-qN-nLf">
             <objects>
                 <navigationController id="Wfh-MJ-l9I" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Co1-kV-MqB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Co1-kV-MqB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -49,7 +44,7 @@
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgl-7C-btx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="3ba-df-gx2"/>
                                     <constraint firstAttribute="height" constant="60" id="oL3-nn-cWB"/>
@@ -194,7 +189,7 @@
         <!--Basic Create View Controller-->
         <scene sceneID="agd-DV-ZLu">
             <objects>
-                <viewController storyboardIdentifier="CreateSurveyController" id="EZn-IY-X0t" customClass="SMBasicCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="CreateSurveyController" storyboardIdentifier="CreateSurveyController" id="EZn-IY-X0t" customClass="SMBasicCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X8L-yj-0Qs"/>
                         <viewControllerLayoutGuide type="bottom" id="CNB-gx-YO7"/>
@@ -381,7 +376,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgP-tG-3wK">
-                                <rect key="frame" x="38" y="606" width="298" height="41"/>
+                                <rect key="frame" x="38.5" y="606" width="298" height="41"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.65098039215686276" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="298" id="hl5-tQ-0po"/>
@@ -443,7 +438,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gender" translatesAutoresizingMaskIntoConstraints="NO" id="tEX-QR-n6i">
-                                <rect key="frame" x="156" y="117" width="62" height="62"/>
+                                <rect key="frame" x="156.5" y="117" width="62" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="62" id="CMe-lT-bNd"/>
                                     <constraint firstAttribute="height" constant="62" id="hYx-Cp-6uZ"/>
@@ -502,7 +497,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-ou-hQA">
-                                <rect key="frame" x="38" y="606" width="298" height="41"/>
+                                <rect key="frame" x="38.5" y="606" width="298" height="41"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.65098039215686276" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="L6V-2r-h4U"/>
@@ -546,7 +541,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="age" translatesAutoresizingMaskIntoConstraints="NO" id="vWk-a7-Awp">
-                                <rect key="frame" x="157" y="112" width="62" height="66"/>
+                                <rect key="frame" x="156.5" y="112" width="62" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="LDx-XZ-pcL"/>
                                     <constraint firstAttribute="width" constant="62" id="h3b-nM-ydB"/>
@@ -960,7 +955,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number_surveys" translatesAutoresizingMaskIntoConstraints="NO" id="nRS-5b-V7N">
-                                <rect key="frame" x="164" y="134" width="46" height="52"/>
+                                <rect key="frame" x="164.5" y="134" width="46" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="98v-0y-zTN"/>
                                     <constraint firstAttribute="height" constant="52" id="xqf-GG-pve"/>
@@ -997,7 +992,7 @@
         <!--Basic Create View Controller-->
         <scene sceneID="E7q-TW-B2d">
             <objects>
-                <viewController id="3wh-iQ-NKq" customClass="SMBasicCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Instructions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3wh-iQ-NKq" customClass="SMBasicCreateViewController" customModule="surveyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tKn-TU-JrQ"/>
                         <viewControllerLayoutGuide type="bottom" id="OhU-jC-iAi"/>
@@ -1030,7 +1025,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbe-yK-qL3">
-                                <rect key="frame" x="25" y="600" width="324" height="47"/>
+                                <rect key="frame" x="25.5" y="600" width="324" height="47"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.65098039215686276" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="Glj-wr-WCF"/>
@@ -1096,19 +1091,11 @@ copy link, and click ‘done.’</string>
         <image name="number_surveys" width="129" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="aD4-pG-xOR"/>
         <segue reference="PkO-7A-7A0"/>
         <segue reference="lYY-E3-wxz"/>
         <segue reference="5Jg-xj-PbX"/>
         <segue reference="fuS-8s-q7S"/>
         <segue reference="J0d-fR-Lbs"/>
-=======
-        <segue reference="J0d-fR-Lbs"/>
-        <segue reference="Z8e-4u-JQC"/>
-        <segue reference="byA-sr-OG6"/>
-        <segue reference="lYY-E3-wxz"/>
-        <segue reference="aD4-pG-xOR"/>
->>>>>>> 954b0595fc334466c41b94a7a6fb245af7f55f21
     </inferredMetricsTieBreakers>
 </document>

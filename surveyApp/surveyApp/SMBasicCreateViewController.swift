@@ -54,15 +54,20 @@ class SMBasicCreateViewController: UIViewController, UITextFieldDelegate {
         print("basic controller segue test..")
         print(survey.title)
         print(restriction.ethnicityRestriction)
-        initializeTextFields()
+        if(self.restorationIdentifier == "CreateSurveyController"){
+            initializeTextFields()
+            name.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+            descrip.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+            est_time.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+            points.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+            nextButton.isEnabled = false
+            nextButton.alpha = 0.25
+        }
+        print("back to the basic...")
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        nextButton.isEnabled = false
-        nextButton.alpha = 0.25
-        name.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
-        descrip.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
-        est_time.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
-        points.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+        
+        
     }
     
     func checkFields(sender: UITextField) {
