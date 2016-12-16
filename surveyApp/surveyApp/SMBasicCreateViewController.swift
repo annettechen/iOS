@@ -10,24 +10,81 @@ import UIKit
 import Alamofire
 
 
-class SMBasicCreateViewController: UIViewController {
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+
+class SMBasicCreateViewController: UIViewController, UITextFieldDelegate {
     
     var survey = Survey()
     var restriction = Restriction()
 
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var descrip: UITextView!
+    @IBOutlet weak var descrip: UITextField!
     @IBOutlet weak var est_time: UITextField!
     @IBOutlet weak var points: UITextField!
     @IBOutlet var webView: UIWebView!
     
     @IBOutlet var cancel: UIButton!
+    @IBOutlet var nextButton: UIButton!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == name { // Switch focus to other text field
+            descrip.becomeFirstResponder()
+        }
+        if textField == descrip { // Switch focus to other text field
+            est_time.becomeFirstResponder()
+        }
+        if textField == est_time { // Switch focus to other text field
+            points.becomeFirstResponder()
+        }
+        return true
+    }
     
     override func viewDidLoad() {
         print("basic controller segue test..")
         print(survey.title)
         print(restriction.ethnicityRestriction)
+        initializeTextFields()
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        nextButton.isEnabled = false
+        nextButton.alpha = 0.25
+        name.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+        descrip.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+        est_time.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+        points.addTarget(self, action:#selector(checkFields(sender:)), for: .editingDidEnd)
+    }
+    
+    func checkFields(sender: UITextField) {
+        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
+        guard
+            let name = name.text, !name.isEmpty,
+            let descrip = descrip.text, !descrip.isEmpty,
+            let est_time = est_time.text, !est_time.isEmpty,
+            let points = points.text, !points.isEmpty
+            else { return }
+        // enable your button if all conditions are met
+        nextButton.isEnabled = true
+        nextButton.alpha = 1.0
+    }
+    
+    func initializeTextFields() {
+        name.delegate = self
+        descrip.delegate = self
+        est_time.delegate = self
+        est_time.keyboardType = UIKeyboardType.numberPad
+        points.delegate = self
+        points.keyboardType = UIKeyboardType.numberPad
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -67,11 +124,19 @@ class SMBasicCreateViewController: UIViewController {
                 doneCreateVC.survey = survey
             }
         }
+
+    }
+    
+    func allTextFieldsFilledOut() -> Bool {
+        if ((name.text?.isEmpty)! || (descrip.text?.isEmpty)! || (est_time.text?.isEmpty)! || (points.text?.isEmpty)!) {
+            return false
+        }
+            
+        else {
+            return true
+        }
     }
 
-    
-    
-    
     
     
 }

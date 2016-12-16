@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EZn-IY-X0t">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EZn-IY-X0t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -352,9 +352,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descrip" destination="vtf-XA-teJ" id="DwY-c3-iz1"/>
+                        <outlet property="descrip" destination="vtf-XA-teJ" id="dww-Rt-EFX"/>
                         <outlet property="est_time" destination="pNF-A2-ggt" id="UQs-cJ-EYY"/>
                         <outlet property="name" destination="6VM-Bp-h5I" id="1oN-Py-CY5"/>
+                        <outlet property="nextButton" destination="0BS-wc-vHA" id="psG-ND-WqG"/>
                         <outlet property="points" destination="o4A-Dk-VYe" id="Izf-Bb-V67"/>
                     </connections>
                 </viewController>
@@ -507,7 +508,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="surveyAgeNext" destination="DM1-70-hpb" eventType="touchUpInside" id="9SA-Kd-O1D"/>
                                     <segue destination="wNj-Rc-hrh" kind="show" identifier="toEthnicityCreate" id="J0d-fR-Lbs"/>
                                 </connections>
                             </button>
@@ -599,6 +599,7 @@
                     <connections>
                         <outlet property="age_lb" destination="3Zn-Xf-yep" id="kIs-bF-QIy"/>
                         <outlet property="age_ub" destination="NcM-YM-ldk" id="RWe-uA-PMl"/>
+                        <outlet property="nextButton" destination="Sud-ou-hQA" id="eXu-5h-OfV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Re4-78-FHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -804,7 +805,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UHx-sX-uRn" kind="show" identifier="toNumberCreate" id="qX7-2Z-QaQ"/>
+                                    <segue destination="UHx-sX-uRn" kind="show" identifier="toNumberCreate" id="jhA-Pf-rsH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Where do you want to limit your responses to?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsH-g2-pgH">
@@ -873,6 +874,7 @@
                     </view>
                     <connections>
                         <outlet property="centerCity" destination="gow-01-K4b" id="mOl-JF-jWQ"/>
+                        <outlet property="nextButton" destination="13x-ml-R1I" id="c1Y-9d-G0S"/>
                         <outlet property="radius" destination="rf1-Qf-Jp4" id="pL3-O3-Mqx"/>
                     </connections>
                 </viewController>
@@ -979,6 +981,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="9xB-bp-bmd" id="iin-hn-ciq"/>
                         <outlet property="num_takers" destination="FNR-ku-Mlz" id="oDP-9l-uUs"/>
                     </connections>
                 </viewController>
@@ -1014,6 +1017,9 @@
                                     <navigationItem title="Create Survey" id="qWW-Cv-NIu">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Sqm-YS-Bp3">
                                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="UHx-sX-uRn" kind="show" id="PkO-7A-7A0"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1085,10 +1091,11 @@ copy link, and click ‘done.’</string>
         <image name="number_surveys" width="129" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z8e-4u-JQC"/>
-        <segue reference="YBg-eu-btF"/>
-        <segue reference="lYY-E3-wxz"/>
         <segue reference="aD4-pG-xOR"/>
+        <segue reference="PkO-7A-7A0"/>
+        <segue reference="lYY-E3-wxz"/>
         <segue reference="5Jg-xj-PbX"/>
+        <segue reference="fuS-8s-q7S"/>
+        <segue reference="J0d-fR-Lbs"/>
     </inferredMetricsTieBreakers>
 </document>
