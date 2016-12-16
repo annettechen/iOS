@@ -135,7 +135,7 @@ class User {
             let new = Survey()
             print("here is the survey json \(surveyJSON)")
             
-            
+            new.id = surveyJSON[index]["id"].int!
             new.title = surveyJSON[index]["name"].string!
             new.description = surveyJSON[index]["description"].string!
             new.est_time = surveyJSON[index]["est_time"].int!
@@ -150,6 +150,7 @@ class User {
         self.takeableSurveys = []
         for index in 0..<surveyJSON.count{
             let new = Survey()
+            new.id = surveyJSON[index]["id"].int!
             new.title = surveyJSON[index]["name"].string!
             new.description = surveyJSON[index]["description"].string!
             new.est_time = surveyJSON[index]["est_time"].int!
@@ -161,6 +162,7 @@ class User {
     func fillSurveyData(surveyJSON: JSON){
         for index in 0..<surveyJSON.count{
             let new = Survey()
+            new.id = surveyJSON[index]["id"].int!
             new.title = surveyJSON[index]["name"].string!
             new.description = surveyJSON[index]["description"].string!
             new.est_time = surveyJSON[index]["est_time"].int!
