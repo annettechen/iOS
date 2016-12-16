@@ -103,6 +103,7 @@ class UserProfileViewController: UIViewController, UITableViewDataSource, UITabl
                 cell.name?.text = user.createdSurveys[indexPath[1]].title
                 cell.surveyDescription?.text = user.createdSurveys[indexPath[1]].description
                 cell.points?.text = ""
+                user.createdSurveys = user.createdSurveys.reversed()
             }
             print(user.createdSurveys.count)
         }
