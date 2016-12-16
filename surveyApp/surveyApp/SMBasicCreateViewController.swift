@@ -32,6 +32,8 @@ class SMBasicCreateViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //load surveyMonkey webView
         let url = NSURL (string: "https://mobile.surveymonkey.com/create/?ut_source=create_survey&ut_source2=header");
         let requestObj = NSURLRequest(url: url! as URL);
         webView?.loadRequest(requestObj as URLRequest);
@@ -45,6 +47,7 @@ class SMBasicCreateViewController: UIViewController {
         survey.points = Int(points.text!)!
     }
     
+    //MARK: Navigation Between Views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toGenderCreate"{
             saveInfo()

@@ -16,9 +16,11 @@ class SurveyUser {
     var relationship = Int()
     
     
+    //MARK: NOTES
     // relationship: [0: creator, 1: taker]
     
     
+    //MARK: Post SurveyUser to API
     func sendSurveyUserToAPI(completion: @escaping(() -> Void)){
         var jsonResult: JSON = ""
         var id: Int = 1

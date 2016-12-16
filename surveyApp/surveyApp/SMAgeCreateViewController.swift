@@ -26,11 +26,7 @@ class SMAgeCreateViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func surveyAgeNext (){
-//        restriction?.ageRestriction.append(Int(age_ub.text!)!)
-//        restriction?.ageRestriction.append(Int(age_ub.text!)!)
-    }
-    
+    //MARK: Navigation between views
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         restriction?.ageRestriction[0] = (Int(age_lb.text!)!)
         restriction?.ageRestriction[1] = (Int(age_ub.text!)!)
