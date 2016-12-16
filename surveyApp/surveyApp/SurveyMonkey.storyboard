@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EZn-IY-X0t">
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EZn-IY-X0t">
+>>>>>>> 954b0595fc334466c41b94a7a6fb245af7f55f21
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1091,11 +1096,19 @@ copy link, and click ‘done.’</string>
         <image name="number_surveys" width="129" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="aD4-pG-xOR"/>
         <segue reference="PkO-7A-7A0"/>
         <segue reference="lYY-E3-wxz"/>
         <segue reference="5Jg-xj-PbX"/>
         <segue reference="fuS-8s-q7S"/>
         <segue reference="J0d-fR-Lbs"/>
+=======
+        <segue reference="J0d-fR-Lbs"/>
+        <segue reference="Z8e-4u-JQC"/>
+        <segue reference="byA-sr-OG6"/>
+        <segue reference="lYY-E3-wxz"/>
+        <segue reference="aD4-pG-xOR"/>
+>>>>>>> 954b0595fc334466c41b94a7a6fb245af7f55f21
     </inferredMetricsTieBreakers>
 </document>

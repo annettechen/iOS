@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="eIf-e6-R2d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="eIf-e6-R2d">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VSG-Ka-0kX" id="1RH-zh-r0h">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Survey Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgE-SM-2f1">
@@ -196,7 +196,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wzZ-5W-Z4b" id="8q5-3Z-pbL">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -281,7 +281,7 @@
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="buttonPress" destination="M6V-Lw-Hhn" eventType="touchUpInside" id="5sc-px-QeI"/>
-                                    <segue destination="FAi-Lt-u21" kind="modal" id="hO9-JS-EAa"/>
+                                    <segue destination="FAi-Lt-u21" kind="modal" identifier="toFinishTakingSurvey" id="hO9-JS-EAa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -385,6 +385,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="CUx-w7-TIh"/>
                     <connections>
+                        <outlet property="surveyNameLabel" destination="Faz-n7-rTX" id="RZR-XB-pWY"/>
                         <outlet property="surveyPointsLabel" destination="LKo-OA-Usy" id="nr6-TL-xhX"/>
                         <outlet property="takeBackToProfile" destination="IFe-os-PVO" id="Gbj-gw-L8y"/>
                     </connections>
@@ -425,7 +426,7 @@
         <simulatedScreenMetrics key="destination" type="retina5_5.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gPD-F7-sK9"/>
+        <segue reference="hO9-JS-EAa"/>
         <segue reference="72u-WE-IRJ"/>
     </inferredMetricsTieBreakers>
 </document>

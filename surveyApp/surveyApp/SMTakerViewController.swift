@@ -35,7 +35,7 @@ class SMTakerViewController: UIViewController {
         let survUser = SurveyUser()
         survUser.user_id = user.id
         print(surv?.id)
-        survUser.relationship = 0
+        survUser.relationship = 1
         survUser.survey_id = (surv?.id)!
         
         survUser.sendSurveyUserToAPI(){
@@ -48,7 +48,9 @@ class SMTakerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toFinishTakingSurvey" {
             if let surveyTakenVC = segue.destination as? SurveyTakenViewController{
+                print("SURVEY TITLE")
                 print(viewModel?.survey.title)
+                print(viewModel?.survey.points)
                 surveyTakenVC.survey = (viewModel?.survey)!
             }
         }

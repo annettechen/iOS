@@ -33,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        user.id = 3
         //register the nib
         let cellNib = UINib(nibName: "FilteredSurveyCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "FilteredSurveyCell")
@@ -52,7 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
         //user.filterTakeableSurveysByLocation()
-        tableView.reloadData()
+//        tableView.reloadData()
 
     }
 
@@ -122,6 +123,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let indexPath = sender as? IndexPath {
             let vm = SurveyDetailViewModel(survey: viewModel.filteredSurvs[indexPath[1]])
             surveyDetailVC.viewModel = vm
+            print ("SURVEY ID")
+            print (viewModel.filteredSurvs[indexPath[1]].id)
+            print("USER ID")
+            print(user.id)
         }
     }
     
